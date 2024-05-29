@@ -4,8 +4,7 @@ const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
 const { DISCORD_TOKEN } = process.env;
 
-// Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
 
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
@@ -30,6 +29,16 @@ for (const folder of commandFolders) {
 // It makes some properties non-nullable.
 client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
+
+	client.user.setPresence({ 
+        status: 'online',
+        activities: [
+            {
+                name: 'Having preggo thoughts while wandering in this sekai',
+				type: []
+            }
+        ]
+    });
 });
 
 client.on(Events.InteractionCreate, async interaction => {
@@ -50,7 +59,7 @@ client.on(Events.InteractionCreate, async interaction => {
 		} else {
 			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 		}
-	}
+	};
 });
 
 // Log in to Discord with your client's token=
