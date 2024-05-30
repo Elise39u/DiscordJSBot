@@ -27,7 +27,7 @@ module.exports = {
                 } else if (file.endsWith('.js')) {
                     const command = require(path.join(dir, file));
                     if (command && command.data && command.data.name) {
-                        commandList += `**/${command.data.name}**: ${command.data.description}\n`;
+                        commandList += `🎀 **/${command.data.name}**: ${command.data.description}\n`;
                     }
                 }
             }
