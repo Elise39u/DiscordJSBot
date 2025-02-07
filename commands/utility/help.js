@@ -35,7 +35,29 @@ module.exports = {
 
         loadCommands(commandsDir);
 
-        const embed = createEmbed('Help - Available Commands', commandList, gifLink);
+        // Soon to come commands 
+        const comingSoonCommands = [
+            { name: 'Lore Explained', description: 'With V3 on the Horizion and LMS in the making. I wanna explain the order of my lore short.' },
+            { name: 'Elise introduction', description: 'An shorter introduction of your preggo trans demi poly preggo girl. Then #962632709405032458' },
+            { name: 'Outifits Explained', description: 'Elise has so many outfits so why not explain them' },
+            { name: 'Refernece Sheets', description: 'An quick reminder on where you can find a few of my creators looks' },
+            { name: 'Server Info', description: 'Gain some information on this arcade' },
+            { name: '8ball 🎱', description: 'It never hurts to ask an 🎱 right? Now with multiple 8balls and different responses' },
+            { name: 'Choice', description: 'Having problem choosing? Let me choose with a few different personailty responses :p' },
+            { name: 'Dadjokje', description: 'Idk why but Elise thought it would be funny if i had some dad jokes even as an demi trans preggo girl.' },
+            { name: 'clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },
+            { name: 'EGS story', description: 'Interested in what EGS stands for... Its the Elise Gender Story.. Im here to explain it' },
+            { name: 'LMS story', description: 'Wonder what LMS stands for now its considerd canon lore? Luka missing story and im here to explain Elises 1st adventure' },
+            { name: 'Stellar Genesis Womb', description: 'A more in debt explanation about elise her utures and powers surrounding it' },
+        ];
+
+        //Add the commands to an list to add later to the command lst 
+        let comingSoonList = '\n✨ **New Abbilties Coming Soon** ✨\n';
+        comingSoonCommands.forEach(cmd => {
+            comingSoonList += `🚧 **/${cmd.name}**: ${cmd.description}\n`;
+        });
+        
+        const embed = createEmbed('Help - Available Commands', commandList + comingSoonList, gifLink);
         await interaction.reply({ embeds: [embed] });
     },
 };
