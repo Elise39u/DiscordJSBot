@@ -16,7 +16,7 @@ module.exports = {
             🎮 **Flight** --> Elise lost this power after she felt down to sand planet where her entry to the vocaloid realm began. She used to travel in a moon shaped symbol or star   
             🎮 **Time stopping** --> Elise learned in a dream that she can stop time.. But the dream dindt turn out to be a dream but real. Now she is learning to harvest this power on a journey  
             🎮 **Chaning Eye Colors** --> I dont think its a power but her eye colors keep chaning and even are not the same as each other. Must be a side effect   
-            🎮 **Hormone infleunce**  --> She always learned that the mark had a infleunce in her hormone treatment. Even making it work better then people expected. Growing to an E-G size on her homne planet but shriking again
+            🎮 **Hormone infleunce**  --> She always learned that the mark had a infleunce in her hormone treatment. Even making it work better then people expected. Growing to an E-G size boob size on her homne planet but shriking again
             Until aqquired her full powers again 
             🎮 **Affection powers** --> Her mark seems to have an affection on you humans. Making some of the easly in love with Elise but others resist it. Guess it handy with that to be poly.   
             🎮 **Fertilazation powers**  --> Elise gotten a utures on her home planet and her Mark seems to influence it a bit too much. Making her highly fertile and easly pregnant   
