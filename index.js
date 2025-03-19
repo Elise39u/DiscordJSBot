@@ -1,11 +1,13 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, ActivityType, Guild } = require('discord.js');
 require('dotenv').config();
 const { DISCORD_TOKEN } = process.env;
-const { createEmbed } = require('../DiscordBot/commands/helpers/embedBuilder')
+const { createEmbed } = require('../DiscordBot/commands/helpers/embedBuilder');
+const memberJoin = require("../DiscordBot/server/serverJoin")
+const memberLeave = require("../DiscordBot/server/serverLeave")
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildPresences] });
 
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
@@ -32,7 +34,7 @@ client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 	const channel = client.channels.cache.get('822837640872067082');
 	const embed = createEmbed(
-		`Digital Assistant v0.1.1 Has launched`,
+		`Digital Assistant v0.2 Has launched`,
 		`Mommy i have launched without any issues and im now live :3. I have to urge to pat my belly`,
 		'https://cdn.discordapp.com/attachments/709057115159003156/1337417775429189673/Screenshot_74.png?ex=67a75edd&is=67a60d5d&hm=2df6b38df7e8995a49414dc34a8b875d2239cbd0dcbf01bc6c069cba4f65f656&'
 	);
@@ -43,7 +45,7 @@ client.once(Events.ClientReady, readyClient => {
         status: 'online',
         activities: [
             {
-                name: 'Having preggo thoughts while wandering in this sekai',
+                name: 'Scouring the lands of sumeru to see if its something for Elise',
 				type: ActivityType.Watching
             }
         ]
@@ -70,6 +72,10 @@ client.on(Events.InteractionCreate, async interaction => {
 		}
 	};
 });
+
+client.on('guildMemberAdd', memberJoin.execute);
+client.on('guildMemberRemove', memberLeave.execute);
+client.rest.on('rateLimited', info => console.log('Rate limit hit:', info));
 
 // Log in to Discord with your client's token=
 client.login(DISCORD_TOKEN);

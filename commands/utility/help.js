@@ -38,7 +38,7 @@ module.exports = {
         // Soon to come commands 
         const comingSoonCommands = [
             { name: 'Lore Explained', description: 'With V3 on the Horizion and LMS in the making. I wanna explain the order of my lore short.' },
-            { name: 'Elise introduction', description: 'An shorter introduction of your preggo trans demi poly preggo girl. Then #962632709405032458' },
+            { name: 'Elise introduction', description: 'An shorter introduction of your preggo trans demi poly preggo girl. Then #elise-introduction in the elise corner' },
             { name: 'Outifits Explained', description: 'Elise has so many outfits so why not explain them' },
             { name: 'Refernece Sheets', description: 'An quick reminder on where you can find a few of my creators looks' },
             { name: 'Server Info', description: 'Gain some information on this arcade' },
