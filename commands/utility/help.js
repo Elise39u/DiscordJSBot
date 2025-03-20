@@ -16,48 +16,59 @@ const randomGIFs = [
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('help')
-        .setDescription('List of avalibile options this preggo assiant can help you with'),
+        .setDescription('List of available commands I can assist you with'),
     async execute(interaction) {
-        const commandsDir = path.join(__dirname, '..', '..', 'commands');
+        const commandDirectories = ['commands', 'server']; // Scan both folders
         let commandList = '';
 
         const gifLink = randomGIFs[Math.floor(Math.random() * randomGIFs.length)];
 
-        const loadCommands = (dir) => {
-            const files = fs.readdirSync(dir);
+        const loadCommands = (dirPath) => {
+            const files = fs.readdirSync(dirPath);
             for (const file of files) {
-                const stat = fs.lstatSync(path.join(dir, file));
+                const filePath = path.join(dirPath, file);
+                const stat = fs.lstatSync(filePath);
                 if (stat.isDirectory()) {
-                    loadCommands(path.join(dir, file));
+                    loadCommands(filePath); // Recursively scan subfolders
                 } else if (file.endsWith('.js')) {
-                    const command = require(path.join(dir, file));
-                    if (command && command.data && command.data.name) {
-                        commandList += `🎀 **/${command.data.name}**: ${command.data.description}\n`;
+                    try {
+                        const command = require(filePath);
+                        if (command?.data?.name && command?.data?.description) {
+                            commandList += `🎀 **/${command.data.name}**: ${command.data.description}\n`;
+                        }
+                    } catch (err) {
+                        console.warn(`Skipping invalid command file: ${filePath}`, err);
                     }
                 }
             }
         };
 
-        loadCommands(commandsDir);
+        // Load commands from all specified directories
+        commandDirectories.forEach((dir) => {
+            const fullPath = path.join(__dirname, '..', '..', dir);
+            if (fs.existsSync(fullPath)) {
+                loadCommands(fullPath);
+            }
+        });
 
-        // Soon to come commands 
+        // List of upcoming commands
         const comingSoonCommands = [
-            { name: 'Lore Explained', description: 'With V3 on the Horizion and LMS in the making. I wanna explain the order of my lore short.' },
-            { name: 'Elise introduction', description: 'An shorter introduction of your preggo trans demi poly preggo girl. Then #elise-introduction in the elise corner' },
-            { name: 'Outifits Explained', description: 'Elise has so many outfits so why not explain them' },
-            { name: 'Refernece Sheets', description: 'An quick reminder on where you can find a few of my creators looks' },
-            { name: 'clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },
-            { name: 'EGS story', description: 'Interested in what EGS stands for... Its the Elise Gender Story.. Im here to explain it' },
-            { name: 'LMS story', description: 'Wonder what LMS stands for now its considerd canon lore? Luka missing story and im here to explain Elises 1st adventure' },
-            { name: 'Stellar Genesis Womb', description: 'A more in debt explanation about elise her utures and powers surrounding it' },
+            { name: 'Lore Explained', description: 'Explaining the order of my lore short, as V3 and LMS approach.' },
+            { name: 'Elise introduction', description: 'A short intro of your preggo trans demi poly girl, Elise.' },
+            { name: 'Outfits Explained', description: 'A breakdown of all Elise’s outfits.' },
+            { name: 'Reference Sheets', description: 'Quick access to creator references for Elise.' },
+            { name: 'Clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },
+            { name: 'EGS Story', description: 'Explaining the meaning of EGS—Elise Gender Story.' },
+            { name: 'LMS Story', description: 'Explaining LMS (Luka Missing Story), Elise’s first adventure.' },
+            { name: 'Stellar Genesis Womb', description: 'A deep dive into Elise’s uterus and its unique powers.' },
         ];
 
-        //Add the commands to an list to add later to the command lst 
-        let comingSoonList = '\n✨ **New Abbilties Coming Soon** ✨\n';
+        // Add upcoming commands to the list
+        let comingSoonList = '\n✨ **Upcoming Features** ✨\n';
         comingSoonCommands.forEach(cmd => {
             comingSoonList += `🚧 **/${cmd.name}**: ${cmd.description}\n`;
         });
-        
+
         const embed = createEmbed('Help - Available Commands', commandList + comingSoonList, gifLink);
         await interaction.reply({ embeds: [embed] });
     },
