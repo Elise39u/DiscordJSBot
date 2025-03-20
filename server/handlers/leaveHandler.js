@@ -17,9 +17,7 @@ const leaveChannelId = "797789187910664193";
 const errorChannelld = "822837640872067082";
 
 async function handleMemberLeave(member) {
-    console.log(`Member left: ${member.user.tag}`);
     const channel = member.guild.channels.cache.get(leaveChannelId);
-    console.log("Leave Channel:", channel);
     if (!channel) {
         const errorChannel = member.guild.channels.cache.get(errorChannelld);
         if(errorChannel) {

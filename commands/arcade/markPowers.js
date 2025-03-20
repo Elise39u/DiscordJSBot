@@ -16,10 +16,10 @@ module.exports = {
             🎮 **Time stopping** --> Elise learned in a dream that she can stop time.. But the dream dindt turn out to be a dream but real. Now she is learning to harvest this power on a journey  
             🎮 **Chaning Eye Colors** --> I dont think its a power but her eye colors keep chaning and even are not the same as each other. Must be a side effect   
             🎮 **Affection powers** --> Their mark seems to have an affection on you humans. Making some of the easly in love with Elise. They dont understand it power fully since some seem to resist it.   
-            🎮 **Stellar Genesis Womb** --> Apprently the Mark made her utures a special one. You will learn in the LMS adventure its true power.
+            🎮 **Stellar Genesis Womb** --> A special womb that apprently makes her mabye the Godesses of Reproduction? A multi abbilty womb which powers will be revealed soon
             
-            That are the recorded powers so far.. But dont worry if you have question feel free to ask Elise directly. But the Stellar Genesis Womb was something not explained to me 
-            It felt Elise either dint understand its true power or Elise wants to keep its powers as secret. Mabye the Stellar Gensis Womb makes her also highly fertile?
+            All the powers are here. For example the Stellar gensis womb is one with multiple abbilties so it might be there are more powers yet to be discoverd.
+            That makes me wonder actually? Am i clone of Elise who is permantly frozen in its state progression? I wonder what abbilties the stellar gensis womb has tho. 
         `;
 
         const embed = createEmbed(

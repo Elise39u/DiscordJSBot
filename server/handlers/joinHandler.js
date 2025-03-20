@@ -6,7 +6,6 @@ const embedWelcomeURLS = [
     "https://cdn.discordapp.com/attachments/757611689003974779/861329293066108936/2ffuym.gif", 
     "https://cdn.discordapp.com/attachments/757611689003974779/861329462636183602/ezgif.com-gif-maker_3.gif",
     "https://cdn.discordapp.com/attachments/757611689003974779/861329538398552084/ezgif-3-f1b581708e09.gif", 
-    "https://media.tenor.com/images/7452b9709e58ee148807ca1637ea308d/tenor.gif", 
     "https://cdn.discordapp.com/attachments/709057115159003156/999650609621897328/gif_5.gif", 
     "https://cdn.discordapp.com/attachments/709057115159003156/948212388925157436/unknown.png", 
     "https://cdn.discordapp.com/attachments/709057115159003156/1096071817199878176/Sepihm_in_the_ring.gif", 
@@ -19,10 +18,18 @@ const embedWelcomeURLS = [
 
 const joinChannelId = "797789187910664193";
 const errorChanneld = "822837640872067082";
+const welcomeRoleId = "699572966551322635";
 
-function getWelcomeRole(member) {
-    const role = member.guild.roles.fetch("699572966551322635");
-    member.role.addRole(role)
+async function getWelcomeRole(member) {
+    try {
+        const role = await member.guild.roles.fetch(welcomeRoleId);
+        if (role) {
+            await member.roles.add(role);
+            console.log(`Assigned role ${role.name} to ${member.user.tag}`);
+        }
+    } catch (error) {
+        console.error(`Failed to assign role: ${error}`);
+    }
 }
 
 async function handleMemberJoin(member) {
