@@ -18,7 +18,7 @@ module.exports = {
         .setName('help')
         .setDescription('List of available commands I can assist you with'),
     async execute(interaction) {
-        const commandDirectories = ['commands', 'server']; // Scan both folders
+        const commandDirectories = ['commands']; // For multiple folder use the same things as in deploy-commands.js
         let commandList = '';
 
         const gifLink = randomGIFs[Math.floor(Math.random() * randomGIFs.length)];
