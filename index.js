@@ -7,7 +7,10 @@ const { createEmbed } = require('../DiscordBot/commands/helpers/embedBuilder');
 const memberJoin = require("../DiscordBot/server/serverJoin")
 const memberLeave = require("../DiscordBot/server/serverLeave")
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildPresences] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, 
+	GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildPresences,
+	GatewayIntentBits.GuildEmojisAndStickers, GatewayIntentBits.GuildIntegrations
+] });
 
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');

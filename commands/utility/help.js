@@ -60,7 +60,7 @@ module.exports = {
             { name: 'Clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },
             { name: 'EGS Story', description: 'Explaining the meaning of EGS—Elise Gender Story.' },
             { name: 'LMS Story', description: 'Explaining LMS (Luka Missing Story), Elise’s first adventure.' },
-            { name: 'Stellar Genesis Womb', description: 'A deep dive into Elise’s uterus and its unique powers.' },
+            { name: 'Stellar Genesis Womb', description: 'Explained why Elise is the goddess of reproduction and her abbilties around this power.' },
         ];
 
         // Add upcoming commands to the list

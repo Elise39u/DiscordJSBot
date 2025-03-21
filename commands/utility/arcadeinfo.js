@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const { createEmbed } = require('../commands/helpers/embedBuilder');
+const { createEmbed } = require('../helpers/embedBuilder');
 const { GUILD_ID } = process.env;
 
 const errorChanneld = "822837640872067082";
