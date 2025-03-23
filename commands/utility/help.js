@@ -58,9 +58,8 @@ module.exports = {
             { name: 'Outfits Explained', description: 'A breakdown of all Elise’s outfits.' },
             { name: 'Reference Sheets', description: 'Quick access to creator references for Elise.' },
             { name: 'Clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },
-            { name: 'EGS Story', description: 'Explaining the meaning of EGS—Elise Gender Story.' },
-            { name: 'LMS Story', description: 'Explaining LMS (Luka Missing Story), Elise’s first adventure.' },
             { name: 'Stellar Genesis Womb', description: 'Explained why Elise is the goddess of reproduction and her abbilties around this power.' },
+            { name: 'Yume', description: 'A small insight into the realationship between my creator Elise and their wife Miku... Also known as Yume ships.' },
         ];
 
         // Add upcoming commands to the list
