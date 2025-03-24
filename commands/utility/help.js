@@ -68,7 +68,7 @@ module.exports = {
             comingSoonList += `🚧 **/${cmd.name}**: ${cmd.description}\n`;
         });
 
-        const embed = createEmbed('Help - Available Commands', commandList + comingSoonList, gifLink);
+        const embed = createEmbed('Help - Available Commands', commandList + comingSoonList, gifLink, "🎀 See what your assitant can do? 🎀");
         await interaction.reply({ embeds: [embed] });
     },
 };

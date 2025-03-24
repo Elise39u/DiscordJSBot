@@ -20,7 +20,8 @@ module.exports = {
         const embed = createEmbed(
             `So you want to learn a bit more about this digital AI made by your preggo demi girl. `,
             description,
-            'https://cdn.discordapp.com/attachments/709057115159003156/1337417881469845514/Screenshot_01.png?ex=67a75ef6&is=67a60d76&hm=47d560595d933738d07ab726f7343f1fa30fe3fed88cb0b29979594b12245e6d&'
+            'https://cdn.discordapp.com/attachments/709057115159003156/1337417881469845514/Screenshot_01.png?ex=67a75ef6&is=67a60d76&hm=47d560595d933738d07ab726f7343f1fa30fe3fed88cb0b29979594b12245e6d&',
+            "🎀 An introduction of your preggo ai assisant 🎀"
         );
 
 	    await interaction.reply({ embeds: [embed] });

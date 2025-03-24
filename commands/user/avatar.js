@@ -18,7 +18,7 @@ module.exports = {
             ? `https://cdn.discordapp.com/guilds/${interaction.guild.id}/users/${targetUser.id}/avatars/${targetMember.avatar}.png?size=512`
             : targetUser.displayAvatarURL({ dynamic: true, size: 512 });
 
-        const embed = createEmbed(`I found ${targetUser.username}'s Avatar`, " ", avatarURL);
+        const embed = createEmbed(`I found ${targetUser.username}'s Avatar`, " ", avatarURL, "🎀 The avtar of " + targetMember.username + " for you 🎀");
         await interaction.reply({ embeds: [embed] });
     },
 };

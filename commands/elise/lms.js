@@ -20,7 +20,8 @@ module.exports = {
         const embed = createEmbed(
             `🎀 My first true adventure. Luka Missing Story a short description 🎀`,
             description,
-            'https://cdn.discordapp.com/attachments/1093876399657451530/1353398025011073196/GmutiuraAAA2Wpo.webp?ex=67e181a2&is=67e03022&hm=790e73c2d8f270a7a87a313b46cbefcd1c1ad9a1dad8adfe6241d20fb62707df&'
+            'https://cdn.discordapp.com/attachments/1093876399657451530/1353398025011073196/GmutiuraAAA2Wpo.webp?ex=67e181a2&is=67e03022&hm=790e73c2d8f270a7a87a313b46cbefcd1c1ad9a1dad8adfe6241d20fb62707df&',
+            "🎀 Luka Missing Story explained 🎀"
         );
 
         embed.setURL("https://www.youtube.com/watch?v=oOVPvZmGHcQ&list=PLNc-vlTat7vhazaNk3t4IwJGlerPOQ7Cu")

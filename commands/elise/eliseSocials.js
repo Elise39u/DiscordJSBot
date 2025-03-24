@@ -23,7 +23,8 @@ module.exports = {
         const embed = createEmbed(
             `I found the following socials of Elise.<:MikuStare:1048727307612868640> *Don't mind the mess behind me*`,
             description,
-            'https://cdn.discordapp.com/attachments/491904770236481549/866804206534524958/unknown.png'
+            'https://cdn.discordapp.com/attachments/491904770236481549/866804206534524958/unknown.png',
+            "My Creators preggos socials :3"
         );
 
         await interaction.reply({ embeds: [embed] });

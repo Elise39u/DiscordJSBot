@@ -29,8 +29,8 @@ async function handleMemberLeave(member) {
 
     const randomImage = embedLeaveUrls[Math.floor(Math.random() * embedLeaveUrls.length)];
 
-    const leaveEmbed = new createEmbed("* A visitor has left the arcade sekai *", "I saw that " +  member.user.displayName  + " left the girly game sekai. Hope we might see them agian soon",
-        randomImage)
+    const leaveEmbed = new createEmbed("*A visitor has left the arcade sekai*", "I saw that " +  member.user.displayName  + " left the girly game sekai. Hope we might see them agian soon",
+        randomImage, "🎀 Someone left the arcade sekai :( 🎀")
     
     await channel.send({ embeds: [leaveEmbed] });
 }

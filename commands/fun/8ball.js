@@ -67,11 +67,11 @@ module.exports = {
         if (EliseResponse[userId]) {
             responses = EliseResponse[userId];
             choseResponse = responses[Math.floor(Math.random() * responses.length)]
-            let embed = createEmbed('Elise Preggo Ball Response', choseResponse, null);
+            let embed = createEmbed('Elise Preggo Ball Response', choseResponse, null, "8ball Creator response");
             await interaction.reply({ embeds: [embed] });
         } else {
             choseResponse = responses[Math.floor(Math.random() * responses.length)]
-            let embed = createEmbed("🎱 response", choseResponse, null);
+            let embed = createEmbed("🎱 response", choseResponse, null, "8ball response");
             await interaction.reply({ embeds: [embed] });
         }
     }

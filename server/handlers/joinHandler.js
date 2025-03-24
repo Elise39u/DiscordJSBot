@@ -45,8 +45,9 @@ async function handleMemberJoin(member) {
 
     const randomImage = embedWelcomeURLS[Math.floor(Math.random() * embedWelcomeURLS.length)];
 
+    await channel.send(`🎀 Welcome to the Arcade Sekai, ${member}! 🎀`);
     const joinEmbed = new createEmbed("🎀 Welcome to the Arcade garden in the Sekai🎀", "Before i start, i do have to say a few things. 💖 \n <#703637751274143854> <-- Channel where you can find the rules of the server 🎀 \n <#797792369416208386>  <-- For some information on the server 🎀 \n <#699557641818734638> <-- Main  chat 🎀 \n <#962632709405032458> <-- Introduction about me if your interested 🎀💙",
-        randomImage)
+        randomImage, "🎀 Welcome to arcade sekai your the " + member.guild.memberCount + "th vistor🎀")
     
     getWelcomeRole(member)
     await channel.send({ embeds: [joinEmbed] });

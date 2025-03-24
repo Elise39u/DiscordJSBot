@@ -20,7 +20,8 @@ module.exports = {
         const embed = createEmbed(
             `🎀 Elise her gender story 🎀`,
             description,
-            'https://media.discordapp.net/attachments/709057115159003156/1242704164681678909/20220728164709_1.jpg?ex=67e0e771&is=67df95f1&hm=f0e56e58f3ceca9af7fe2e33e32018e50d6c44649a137f5fddc7f55108f7a4c2&=&format=webp&width=1461&height=823'
+            'https://media.discordapp.net/attachments/709057115159003156/1242704164681678909/20220728164709_1.jpg?ex=67e0e771&is=67df95f1&hm=f0e56e58f3ceca9af7fe2e33e32018e50d6c44649a137f5fddc7f55108f7a4c2&=&format=webp&width=1461&height=823',
+            "🎀 Elise Gender Story explained 🎀"
         );
 
         embed.setURL("https://www.youtube.com/watch?v=GxUxIMQsYP4&list=PLNc-vlTat7viUYY1BuxU1T563gskQpvJJ")

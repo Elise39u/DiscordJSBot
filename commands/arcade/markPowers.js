@@ -25,7 +25,8 @@ module.exports = {
         const embed = createEmbed(
             `Preggo Elise Their powers. Let me summarize `,
             description,
-            'https://cdn.discordapp.com/attachments/709057115159003156/1337427012238839808/image.png?ex=67a76777&is=67a615f7&hm=6272fe4bfcefc809bf279e3b9ea97a38f4cf1d43bc19c893123e5731113c6d43&'
+            'https://cdn.discordapp.com/attachments/709057115159003156/1337427012238839808/image.png?ex=67a76777&is=67a615f7&hm=6272fe4bfcefc809bf279e3b9ea97a38f4cf1d43bc19c893123e5731113c6d43&',
+            "🎀 My creator their offical powers as been found been in <#1152967259225075803> 🎀"
         );
 
 	    await interaction.reply({ embeds: [embed] });
