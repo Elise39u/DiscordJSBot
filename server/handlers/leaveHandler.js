@@ -1,4 +1,6 @@
 const { createEmbed } = require('../../commands/helpers/embedBuilder');
+const { errorHandeler } = require('../../commands/helpers/errorHandler');
+const { ERROR_CHANNEL, WELCOME_CHANNEL } = process.env
 
 const embedLeaveUrls = [
     "https://images.hdqwalls.com/wallpapers/sad-miku-1a.jpg",
@@ -13,26 +15,27 @@ const embedLeaveUrls = [
     "https://cdn.discordapp.com/attachments/709057115159003156/1096071816814010469/P7qoKy.gif"
 ];
 
-const leaveChannelId = "797789187910664193";
-const errorChannelld = "822837640872067082";
 
 async function handleMemberLeave(member) {
-    const channel = member.guild.channels.cache.get(leaveChannelId);
-    if (!channel) {
-        const errorChannel = member.guild.channels.cache.get(errorChannelld);
-        if(errorChannel) {
-            const errorEmbed = new createEmbed("Mommy Elise i got an error", "I expiercend an error while a member left can you look at me", null);
-            await errorChannel.send({ embeds: [errorEmbed] });
+    try {
+        const channel = member.guild.channels.cache.get(WELCOME_CHANNEL);
+        if (!channel) {
+            const errorChannel = member.guild.channels.cache.get(ERROR_CHANNEL);
+            if(errorChannel) {
+                throw new Error("Mammy i couldnt find the welcome channel");
+            }
+            return;
         }
-        return;
+
+        const randomImage = embedLeaveUrls[Math.floor(Math.random() * embedLeaveUrls.length)];
+
+        const leaveEmbed = new createEmbed("*A visitor has left the arcade sekai*", "I saw that " +  member.user.displayName  + " left the girly game sekai. Hope we might see them agian soon",
+            randomImage, "🎀 Someone left the arcade sekai :( 🎀")
+        
+        await channel.send({ embeds: [leaveEmbed] });
+    } catch(error) {
+        await errorHandeler(error.message, 0xff0000, "LEAVE_HANDLER_CHNL_ERR", "leaveHandler");
     }
-
-    const randomImage = embedLeaveUrls[Math.floor(Math.random() * embedLeaveUrls.length)];
-
-    const leaveEmbed = new createEmbed("*A visitor has left the arcade sekai*", "I saw that " +  member.user.displayName  + " left the girly game sekai. Hope we might see them agian soon",
-        randomImage, "🎀 Someone left the arcade sekai :( 🎀")
-    
-    await channel.send({ embeds: [leaveEmbed] });
 }
 
 module.exports = { handleMemberLeave };

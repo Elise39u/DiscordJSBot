@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const axios = require('axios');
+const { ERROR_CHANNEL } = process.env
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -32,8 +33,7 @@ module.exports = {
 };
 
 async function errorHandling(interaction, status) {
-    const loggingChannelId = '822837640872067082';
-    const loggingChannel = await interaction.client.channels.fetch(loggingChannelId);
+    const loggingChannel = await interaction.client.channels.fetch(ERROR_CHANNEL);
     
     if (loggingChannel) {
         await loggingChannel.send('https://cdn.discordapp.com/attachments/709057115159003156/1109789108722741389/909558100162379877.gif');
