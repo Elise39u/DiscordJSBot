@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const axios = require('axios');
-const { ERROR_CHANNEL } = process.env
+const { errorHandeler } = require('../helpers/errorHandler');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -24,21 +24,10 @@ module.exports = {
                 };
                 await interaction.reply({ embeds: [jokeEmbed] });
             } else {
-                await errorHandling(interaction, response.status);
+                await errorHandeler(response.status, 0xff0000, "Response_status_error", "dadjoke");
             }
         } catch (error) {
-            await errorHandling(interaction, error.response?.status || 'Unknown Error');
+            await errorHandeler(error.message, 0xff0000, "ERR_GETTING_DAD_JOKE", "dadjoke");
         }
     }
 };
-
-async function errorHandling(interaction, status) {
-    const loggingChannel = await interaction.client.channels.fetch(ERROR_CHANNEL);
-    
-    if (loggingChannel) {
-        await loggingChannel.send('https://cdn.discordapp.com/attachments/709057115159003156/1109789108722741389/909558100162379877.gif');
-        await loggingChannel.send(`<@203095887264743424> Halp Mommy Elise. I found an error status while trying to get a joke: **${status}**`);
-    }
-    
-    await interaction.reply(`Oopsie, I found status code ${status}. I notified Mommy Elise, but for now, try again later for a new joke. ${interaction.user}`);
-}

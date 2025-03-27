@@ -1,8 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const { createEmbed } = require('../helpers/embedBuilder');
-const { GUILD_ID } = process.env;
-
-const errorChanneld = "822837640872067082";
+const { errorHandeler } = require('../helpers/errorHandler');
+const { GUILD_ID} = process.env;
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -37,11 +35,7 @@ module.exports = {
         await interaction.reply({ embeds: [embed] });
 
         } catch (error) {
-            const errorChannel = member.guild.channels.cache.get(errorChanneld);
-            if(errorChannel) {
-                const errorEmbed = new createEmbed("Mommy Elise i got an error", "I expiercend an error while looking for the Sekai data", null);
-                await channel.send({ embeds: [errorEmbed] });
-            }
+            await errorHandeler(error.message, 0xff0000, "ARCADE_INFO_RETRIVE_ERR", "aracadeinfo");
         }
     }
 };
