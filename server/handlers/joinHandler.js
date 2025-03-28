@@ -3,19 +3,12 @@ const { errorHandeler } = require('../../commands/helpers/errorHandler');
 const { ERROR_CHANNEL, WELCOME_CHANNEL } = process.env
 
 const embedWelcomeURLS = [
-    "https://i.kym-cdn.com/photos/images/original/001/236/970/0f1.gif", 
-    "https://cdn.discordapp.com/attachments/757611689003974779/861329033756672030/LTWB_Micrystal.gif", 
-    "https://cdn.discordapp.com/attachments/757611689003974779/861329293066108936/2ffuym.gif", 
-    "https://cdn.discordapp.com/attachments/757611689003974779/861329462636183602/ezgif.com-gif-maker_3.gif",
-    "https://cdn.discordapp.com/attachments/757611689003974779/861329538398552084/ezgif-3-f1b581708e09.gif", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/999650609621897328/gif_5.gif", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/948212388925157436/unknown.png", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/1096071817199878176/Sepihm_in_the_ring.gif", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/1096071815903846442/Mannequin.gif", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/1096071814494552135/ezgif-3-025a1bb57f42.gif", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/1096071814075134092/ezgif.com-optimize.gif", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/1096071815392145559/ChristmasGif.gif", 
-    "https://cdn.discordapp.com/attachments/709057115159003156/1096071990965698601/tenor_3.gif"
+    "https://cdn.discordapp.com/attachments/859788500114210826/1355166541376917727/pjsk-pjsk-anime2.gif?ex=67e7f0b1&is=67e69f31&hm=ab5a2dd153335d6f6f4830b930607d1a5433e773a8743fcdf2ff09a3393f2b2d&",
+    "https://cdn.discordapp.com/attachments/859788500114210826/1355166541934497793/ezgif-1ce8f1147c6317.gif?ex=67e7f0b1&is=67e69f31&hm=62fa49cc178289473683731e86e57f3eff22adcbceafe78c9adbbb31accf7cbe&",
+    "https://cdn.discordapp.com/attachments/859788500114210826/1355166542446465055/pjsk-pjsk-anime.gif?ex=67e7f0b1&is=67e69f31&hm=901433f89e6943d68a23b5d4f58c2309e06ad9aa08294718b47e2092c6d66ad1&",
+    "https://cdn.discordapp.com/attachments/859788500114210826/1355166542970486864/pjsk-anime-pjsk.gif?ex=67e7f0b1&is=67e69f31&hm=408d2f93e5205127688d9547477f10291d95530d2fbe193da4f17ae8dda64e19&",
+    "https://cdn.discordapp.com/attachments/859788500114210826/1355166543453098175/hatsune-miku-project-sekai.gif?ex=67e7f0b1&is=67e69f31&hm=07cc0252b2ed307c0e12777f66f8efa46e02d33167293448f0e4afb76105d22c&",
+    "https://cdn.discordapp.com/attachments/859788500114210826/1355166543918403624/pjsk-anime-project-sekai-anime.gif?ex=67e7f0b1&is=67e69f31&hm=97fa209e59a62d68125874e968acba13e7abb6c850ae94cf3e72fffcae3a53d0&"
 ]
 
 const welcomeRoleId = "699572966551322635";

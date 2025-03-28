@@ -58,18 +58,16 @@ module.exports = {
         // Generate the command list with categories
         let commandList = '';
         for (const [category, commands] of Object.entries(categories)) {
-            commandList += `\n### ${category}\n${commands.join('\n')}`;
+            commandList += `\n*${category}*\n${commands.join('\n')}`;
         }
 
         // Upcoming commands
         const comingSoonCommands = [
             { name: 'Lore Explained', description: 'Explaining the order of my lore short, as V3 and LMS approach.' },
-            { name: 'Elise introduction', description: 'A short intro of your preggo trans demi poly girl, Elise.' },
             { name: 'Outfits Explained', description: 'A breakdown of all Elise’s outfits.' },
             { name: 'Reference Sheets', description: 'Quick access to creator references for Elise.' },
             { name: 'Clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },
             { name: 'Stellar Genesis Womb', description: 'Explained why Elise is the goddess of reproduction and her abbilties around this power.' },
-            { name: 'Yume', description: 'A small insight into the realationship between my creator Elise and their wife Miku... Also known as Yume ships.' },
         ];
 
         let comingSoonList = '\n✨ **Upcoming Features** ✨\n';
