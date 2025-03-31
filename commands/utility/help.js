@@ -63,7 +63,6 @@ module.exports = {
 
         // Upcoming commands
         const comingSoonCommands = [
-            { name: 'Lore Explained', description: 'Explaining the order of my lore short, as V3 and LMS approach.' },
             { name: 'Outfits Explained', description: 'A breakdown of all Elise’s outfits.' },
             { name: 'Reference Sheets', description: 'Quick access to creator references for Elise.' },
             { name: 'Clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },

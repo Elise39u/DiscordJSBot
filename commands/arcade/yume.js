@@ -20,7 +20,7 @@ module.exports = {
         const embed = createEmbed(
             `🎀 Elise and Miku what the deal between them? 🎀`,
             description,
-            'https://cdn.discordapp.com/attachments/1093876399657451530/1355154015914295408/English_ver.png?ex=67e7e506&is=67e69386&hm=7bc14d22354eb02f4e6af9e342c53a3da3391c3d286ede25cca740926b99e6a4&',
+            'https://cdn.discordapp.com/attachments/1093876399657451530/1355831333678616586/English_ver.png?ex=67ea5bd4&is=67e90a54&hm=5c91c2c71153fee26fe7414a60f40ef1953089fe2d2f65856189314f54159330&',
             "🎀 Elsie their yume sheet.🎀"
         );
 	    await interaction.reply({ embeds: [embed] });
