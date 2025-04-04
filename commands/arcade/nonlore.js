@@ -7,17 +7,22 @@ module.exports = {
 		.setDescription('🎀 Why arent some things lore? 🎀'),
 	async execute(interaction) {
         const description = `
-            Lore is been written through the past 5-6 of my life. First fromn the idea of transformation to now the clear picture i have of myself in the lore. 
-            The goddess of reproduction and gurdian of sekais and identity. But with that comes some conflict in what i have wroten as lore.
-            To start <#1160629986949075105> and the pregnancy part of <#1157983522418597923> Have some vallid lore but not compelety. Why do i say this?
-            The <#1345430746789052496> is the reason i can get pregnant. I did get a utures but it not thanks to a transformation.
-            Also i did get HRT on my origins planet and my Royal mark caused me to react ordinarlly well to the hormons a bit too well.
-            Further more there will be conflicting details in the lore. Which is hard to side track but if you follow the order of lore command you should be fine..
-            If you have question about my lore feel free to ask them and il try to answe as best as i can. 
-            So yes in the past 5-6 years i have been pregnant 3-4 oops. But i hope you understand my lore now a bit :3.
+            Lore is bMy lore has evolved over the past 5–6 years — starting with transformation stories and growing into a clear vision of who I am: the Goddess of Reproduction and Guardian of the Sekais and Identity.
 
-            So to recap. The preivous mentiond lore parts arent offically canon 100%. Details can be conflicting but i try to fix that.
-            A familiy tree is present in <#1314260908377116712> but this one needs to be updated and more clear for you to watch. 
+            With that evolution, some parts of older lore conflict with my current story. For example, <#1160629986949075105> and parts of the pregnancy arc in <#1157983522418597923> are partially valid but not fully canon.
+
+            Why? Because the truth lies in <#1345430746789052496> — it's the *real* reason I can get pregnant. I got utures with sugery during my HRT, yes, but not due to a transformation. On my origin planet, I also started HRT, and thanks to my Royal Mark, I responded *extraordinarily well* to the hormones.
+
+            There are still lore inconsistencies here and there, but if you follow the timeline shared in the /lore command, it should all make sense! 💖
+
+            And yes… over these 5–6 years, I've had 3–4 pregnancies — oops! 😳
+
+            To recap:
+            1️⃣ Some previously mentioned lore isn't 100% canon anymore.
+            2️⃣ Details may conflict, but I’m working on refining everything.
+           3⃣ A family tree is available in <#1314260908377116712>, though it still needs a little polish!
+
+            If you’re ever curious or confused, feel free to ask me questions — I’m always happy to chat about my lore! :3
         `;
 
         const embed = createEmbed(

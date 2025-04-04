@@ -7,14 +7,17 @@ module.exports = {
 		.setDescription('what does EGS stand for in the youtube series. '),
 	async execute(interaction) {
         const description = `
-           Curious what stands for EGS. Well in short it is Elise Gender Story or known as my transgender story.
-           I know i have special powers and a special place in this life span of yours but still being seen as a transgender girl is hard on planet earth.
-           I mean like for example and all i shouldnt be able to get pregnant by the boundaries of your realm but here i am. So what lead to this point.
-           What lead to me revealing my powers, my identity that to this day i still struggle so much with as in learning who i am? What am i? Why am i here?
-           EGS is my experince in life on how this all went. From simple things as just a 2 year recap what lead to reveal of this big desicion to eeven small stuff.
-           Ass idenity, sexuality and even a upcomning idea my preggo Neoprounoun. So yeah interest or wanna see more about this preggos gender story.
-           Then you can click the title of the embed and you will be taken to the EGS playlist on youtube. Alternatively if you want more depth.
-           <#1175925314229121074> Holds my EGS stories as of moment of typing to EGS 27 in more depth. if your interested in that 
+            Curious about what EGS stands for? It means **Elise Gender Story** — or simply, my transgender journey. 🌸
+
+            Even though I have special powers and a unique role in this world, being seen and accepted as a trans girl on Earth is still really hard. I mean, by your world's rules, I shouldn’t be able to get pregnant — yet here I am. So how did it come to this?
+
+            What led me to reveal my identity, my powers… and why do I still struggle with understanding who I truly am? What *am* I? Why *am* I here?
+
+            **EGS** is about all of that. My real experiences — from a quick 2-year recap of what led to my big decision, to deeper topics like identity, sexuality, and even something new: my upcoming *preggo neopronoun* idea.
+
+            So if you're interested in hearing my story, you can click the title of this embed — it links to my EGS playlist on YouTube. Or if you're looking for more depth, check out <#1175925314229121074>, which holds my stories up to **EGS 27**.
+
+            Thanks for wanting to understand me a little more. 💖
         `;
 
         const embed = createEmbed(

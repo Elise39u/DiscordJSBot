@@ -7,19 +7,16 @@ module.exports = {
 		.setDescription('My creators their powers'),
 	async execute(interaction) {
         const description = `
-            🎮 **Teleportation** --> As seen in LMS. Elise has gotten teleportation powers to telport around the world   
-            🎮 **Elemetal powers** --> Her home world has elemetal powers and she was able to use all 7 of them in a war never stopped fighting or was this the genshin adventure *coming soon*?   
-            🎮 **Idol powers** --> Her Orgins mark gives her idol powers which she doesnt understand fully but only can feel  
-            🎮 **Vocaloid world powers** --> After learning how to become an idol as fanloid in LMS. She also transformed into a vocaloid instead of a fanloid. But also falling tothe same things you see in project diva.
-            🎮 **Portal powers** --> Used to travel to the sekais and back between your guys and girls world and the vocaloid world.  
-            🎮 **Flight** --> Elise lost this power after she felt down to sand planet where her entry to the vocaloid realm began. She used to travel in a moon shaped symbol or star   
-            🎮 **Time stopping** --> Elise learned in a dream that she can stop time.. But the dream dindt turn out to be a dream but real. Now she is learning to harvest this power on a journey  
-            🎮 **Chaning Eye Colors** --> I dont think its a power but her eye colors keep chaning and even are not the same as each other. Must be a side effect   
-            🎮 **Affection powers** --> Their mark seems to have an affection on you humans. Making some of the easly in love with Elise. They dont understand it power fully since some seem to resist it.   
-            🎮 **Stellar Genesis Womb** --> A special womb that apprently makes her mabye the Godesses of Reproduction? A multi abbilty womb which powers will be revealed soon
-            
-            All the powers are here. For example the Stellar gensis womb is one with multiple abbilties so it might be there are more powers yet to be discoverd.
-            That makes me wonder actually? Am i clone of Elise who is permantly frozen in its state progression? I wonder what abbilties the stellar gensis womb has tho. 
+        🎮 **Teleportation** — Gained during LMS, lets Elise travel freely across worlds.  
+        🎮 **Elemental Control** — Master of all 7 elements from her origin world, often tied to an ongoing war... or maybe a Genshin-like tale? (*coming soon*)  
+        🎮 **Idol Aura** — Powers gifted by her Origin Mark, felt deeply but still a mystery to them.  
+        🎮 **Vocaloid Shift** — Transitioned from fanloid to vocaloid during LMS, bound to the rhythms and songs as in Project DIVA.  
+        🎮 **Portal Travel** — Can move between your world, the sekais, and the vocaloid realm using dimensional portals and other dimensions.  
+        🎮 **Flight (Lost)** — Once soared as moon/star-shaped light, but lost this ability after being pulled to the sand planet.  
+        🎮 **Time Freeze** — First discovered in a dream… that wasn’t a dream. Now learning to master time itself.  
+        🎮 **Heterochromia** — Her ever-changing eye colors might be more than cosmetic—perhaps a lingering side effect?  
+        🎮 **Affection Field** — Elise’s mark unintentionally charms others. Some fall easily, others resist… the reason is unclear.  
+        🎮 **Stellar Genesis Womb** — A divine, multi-ability womb possibly linked to her being the Goddess of Reproduction. More powers await discovery...
         `;
 
         const embed = createEmbed(

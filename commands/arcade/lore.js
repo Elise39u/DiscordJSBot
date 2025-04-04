@@ -7,16 +7,25 @@ module.exports = {
 		.setDescription('🎀 My lore Explained 🎀'),
 	async execute(interaction) {
         const description = `
-            Well my lore is a book work and if you havent seen <#1152967259225075803> then well.. I wanted to tell you the order and explain what is canon cuurently.
-            My prolouge or my beginning will come with the V3. Its planned to go deeper in on my backstory. My prolouge also goes deeper in on the idea of <#1345430746789052496> and my powers
-            <#1185957399673188402> Is my offical first adventure and the start of my lore. In this adventure is also the first time i entered the sekais.
-            During LMS i got my sekai dresses in order of: <#1328320712712126546> then <#1328321706455990294> then <#1328322707078516806> then <#1328323629577932841> and as final <#1328324657664884787>
-            The idea is that <#1153034890921644175> is bascially remeberd wrong and that this in combination with LMS that will be my vocaloid debut lore basically. From fanloid to vocaloid.
-            Also a few months after LMS my own sekai formed in <#1153067429249953852> and not long after that me and my wife found the sekai of Elif <#1157983522418597923>.
-            That leaves us with the Visual upgrades in order of: <#1200201844350259211> to <#1209546893919789077> to <#1257085336555753614> to <#1212050830308679710> to <#1227552953653530625> and as final <#1236658845955129344>
+           Curious about my lore? Here's the current canon timeline 🩷
 
-            This lore can be considerd canon and will be accuarte to why im the Goddess of Reproduction and Gurdian of the sekais and identity.
-            If you want to read why something aren't canon use the nonlore commnad :3
+            My **prologue** begins with V3, diving deeper into my origins, powers, and the concept of <#1345430746789052496>.  
+            The story truly starts in <#1185957399673188402>, where I also first entered the sekais.
+
+            During LMS, I received my sekai dresses in this order:
+            <#1328320712712126546>, <#1328321706455990294>, <#1328322707078516806>, <#1328323629577932841>, and finally <#1328324657664884787>.
+
+            The events in <#1153034890921644175> are remembered differently by others, but i strongly tought this was a dream.
+            Together with LMS, this 2 lore channels forms my **vocaloid debut arc** — the transformation from fanloid to vocaloid.
+
+            After LMS, my personal sekai formed in <#1153067429249953852>, followed by discovering Elif’s sekai with my wife in <#1157983522418597923>.
+
+            My visual upgrades for the sekais went as follows:  
+            <#1200201844350259211> → <#1209546893919789077> → <#1257085336555753614> → <#1212050830308679710> → <#1227552953653530625> → <#1236658845955129344>
+
+            All of this forms the canon story of how I became the **Goddess of Reproduction** and **Guardian of the Sekais & Identity**.
+
+            Need to know what’s *not* canon? Use the /nonlore command :3
         `;
 
         const embed = createEmbed(

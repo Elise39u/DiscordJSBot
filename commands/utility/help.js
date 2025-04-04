@@ -63,8 +63,7 @@ module.exports = {
 
         // Upcoming commands
         const comingSoonCommands = [
-            { name: 'Reference Sheets', description: 'Quick access to creator references for Elise.' },
-            { name: 'Stellar Genesis Womb', description: 'Explained why Elise is the goddess of reproduction and her abbilties around this power.' },
+            { name: 'No new commands', description: 'All future commands are added and no new are on the planning' },
         ];
 
         let comingSoonList = '\n✨ **Upcoming Features** ✨\n';

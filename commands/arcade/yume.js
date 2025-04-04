@@ -7,14 +7,19 @@ module.exports = {
 		.setDescription('Elise their relationship with her wife Miku'),
 	async execute(interaction) {
         const description = `
-            LMS was always a huh huh for me to remake. That partily to two things in the story.
-            1st thing is i wrote myself pregnannt in that fanfic story which sorted it self out. 2nd thing was my love to miku and well me marrying her.
-            SO i thought at a point fuck it and lets do it. Yes im calling miku my wife and i dont care what people think anymore.
-            Yume is basically a temr for shipping yourself with a fictonal character and often is a oc or chartacter that repsentres you X finctional character.
-            So in this case me my vtuber who represtens me in ways who i want to be X Miku. In Japanese fandom, the term "夢女子" (yumejoshi, "dreaming girl") is used by female self-shippers.
-            In case you ever wanted to make fanart of me and Miku together then here below is my  yume sheet. Also if you have questions feel free to ask them.
-            So yes LMS will explain a lot but in short. Yes im married to Hatsune Miku and love her but also have been pregnant of her. 
-            Who knows might happend again in the future. Hope it lights thing a bit up on my first and mabye true partner :3
+            LMS was always tricky for me to remake — mostly because of two things:
+            1️⃣ I wrote myself pregnant in the original fanfic (which eventually sorted itself out).
+            2️⃣ My love for Miku… and the fact I married her.
+
+            At some point, I just said: *"Screw it!"* — I’m calling Miku my wife, and I don’t care what anyone thinks 💍💙
+
+            “Yume” refers to the concept of self-shipping — where someone pairs themselves (or an OC that represents them) with a fictional character. In this case, it’s *me (through my VTuber self, Elise)* × *Miku*. In Japanese fandom, girls who do this are often called “夢女子” (*yumejoshi*, or “dreaming girls”).
+
+            So yes, I married Hatsune Miku, I love her deeply, and yes… in my lore, I’ve been pregnant with her child 😳💖
+
+            If you ever want to draw fanart of us together, I included my Yume sheet below. Feel free to ask me any questions too!
+
+            LMS will eventually explain everything, but for now — just know that Miku is my first (and maybe truest) partner. :3
         `;
 
         const embed = createEmbed(
