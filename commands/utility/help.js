@@ -63,9 +63,7 @@ module.exports = {
 
         // Upcoming commands
         const comingSoonCommands = [
-            { name: 'Outfits Explained', description: 'A breakdown of all Elise’s outfits.' },
             { name: 'Reference Sheets', description: 'Quick access to creator references for Elise.' },
-            { name: 'Clapify', description: '👏 Time 👏 for 👏 a 👏 fun 👏 clapping 👏 session 👏' },
             { name: 'Stellar Genesis Womb', description: 'Explained why Elise is the goddess of reproduction and her abbilties around this power.' },
         ];
 

@@ -11,7 +11,7 @@ module.exports = {
             My prolouge or my beginning will come with the V3. Its planned to go deeper in on my backstory. My prolouge also goes deeper in on the idea of <#1345430746789052496> and my powers
             <#1185957399673188402> Is my offical first adventure and the start of my lore. In this adventure is also the first time i entered the sekais.
             During LMS i got my sekai dresses in order of: <#1328320712712126546> then <#1328321706455990294> then <#1328322707078516806> then <#1328323629577932841> and as final <#1328324657664884787>
-            The idea is that <#1153034890921644175> is bascially remeberd wrong and that this in combination with LMS by my vocaloid debut lore basically. From fanloid to vocaloid.
+            The idea is that <#1153034890921644175> is bascially remeberd wrong and that this in combination with LMS that will be my vocaloid debut lore basically. From fanloid to vocaloid.
             Also a few months after LMS my own sekai formed in <#1153067429249953852> and not long after that me and my wife found the sekai of Elif <#1157983522418597923>.
             That leaves us with the Visual upgrades in order of: <#1200201844350259211> to <#1209546893919789077> to <#1257085336555753614> to <#1212050830308679710> to <#1227552953653530625> and as final <#1236658845955129344>
 

@@ -18,7 +18,10 @@ module.exports = {
             ? `https://cdn.discordapp.com/guilds/${interaction.guild.id}/users/${targetUser.id}/avatars/${targetMember.avatar}.png?size=512`
             : targetUser.displayAvatarURL({ dynamic: true, size: 512 });
 
-        const embed = createEmbed(`I found ${targetUser.username}'s Avatar`, " ", avatarURL, "🎀 The avtar of " + targetMember.username + " for you 🎀");
+        // Check if the user has a nickname else use the username to prevent null or undefined in the footer.
+        const displayName = targetMember.nickname || targetUser.username;
+
+        const embed = createEmbed(`I found ${targetUser.username}'s Avatar`, " ", avatarURL, "🎀 The avtar of " + displayName + " for you 🎀");
         await interaction.reply({ embeds: [embed] });
     },
 };
