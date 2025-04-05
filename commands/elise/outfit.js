@@ -7,15 +7,36 @@ module.exports = {
 		.setDescription('🎀 Well let this preggo explain preggos outfits too you 🎀'),
 	async execute(interaction) {
         const description = `
-            3 Version outfits, 18 pokemon outfits and well even 10 sekai outfits... Its clear this preggo has a lot of outfits and this pregog wants to help you understand them.
-            Below in the image you see my 3 version outfits. Raning from my very first outfit to my upcoming v3. Booba sizes is adjusted to fit current v2 looks.
-            After that we have my 10 sekai looks which can be found <#962632624587808810> My sekai dresses are themed to Miku as in LMS i was the closest to her.
-            See it as an connection or bond between me and her or a unit. The VU are based on a connection between me and someone in the unit. Like saki in leo/need.
-            The normal sekai dresses also focus a bit on this bond between me and them. But every look of my also has a pregnant and non pregnant version. This can be found in <#1113790775269015563>.
-            Or an part of it... I have too many looks to show like the <#1291045909399863306> That would be an other 36 looks to add if you include pregnant and non pregnant. 
-            Besides this i usually see: My main V2, Alt V2, Girly gamer and Fairy Elise as my main look combo or main group. With V1 and V3 added to it. To focus a bit on my lore importance.
-            As last i have looks that are tied to well my wife miku as in: Dillema Elise, Backrooms Elise (Fun fact my odds and ends dress became this) or highlight Elis.
-            Well its a lot and make sure to keep an eye on my streams and yt to see them all. With love preggo elise
+            From 3 version outfits, to 18 Pokémon looks, to 10 Sekai dresses...  
+            Yeah, this preggo has a whole *closet-full* of styles — and I’m here to help you understand them all~ 🎀
+
+            In the image below, you’ll see my **3 version outfits**, from my very first look to the upcoming **V3**.  
+            Booba size has been adjusted to match my current V2 design — consistency matters 😌
+
+            After that, there are my **10 Sekai dresses** (see <#962632624587808810>).  
+            These outfits are themed around Miku, because in LMS I was closest to her.  
+            Think of it like a bond or unit connection — kind of like how i am a close friend to Saki in Leo/Need 💫  
+            My **Visual Upgrades (VU)** are also based on these bonds with different unit members.
+
+            Every look I have comes in both **pregnant and non-pregnant versions** — yep, every single one!  
+            You can find a collection of these in <#1113790775269015563> (though not all, I’ve got *too many*).  
+            Project Elise mon has it seprated channel: <#1291045909399863306>. The would be anthor 36 if you count both versions 😅
+
+            I usually consider these as my *main look set*:
+            1️⃣ Main V2
+            2️⃣ Alt V2
+            3️⃣ Girly Gamer Elise
+            4️⃣ Fairy Elise  
+            And of course, **V1** and **V3** — since they hold deeper lore importance 🌙
+
+            I’ve also got special designs tied to Miku like:
+            1️⃣ Dilemma Elise
+            2️⃣ Backrooms Elise (fun fact: based on my Odds & Ends dress!)
+            3️⃣ Highlight Elise
+
+            So yeah... I may have a *lot* of outfits, but each one tells a story 💖  
+            Catch them all in my streams or on YouTube — with love,  
+            **Preggo Elise** ✨
         `;
 
         const embed = createEmbed(

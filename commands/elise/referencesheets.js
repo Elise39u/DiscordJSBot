@@ -7,14 +7,26 @@ module.exports = {
 		.setDescription('Want to see a reference sheet for a look?'),
 	async execute(interaction) {
         const description = `
-        I want to keep this one short and sweet to make it cleaer. As stated every look of my has a pregnant and non pregnant version.
-        But not every look has a reference sheet or mabye only a pregnant reference sheet version or the other way around.
-        <#962632624587808810> Contains referencesheet for my non pregnant versions.
-        <#1113790775269015563> Contains reference sheets for my pregnant versions.
-        <#1291045909399863306> Everything related to Project elise mon including reference sheets for all 18 type outfits. 2 small reminders
-        Project Elise mon doesnt have pregnant reference sheets and as said not all my looks are visable in the reference sheets.
-        Simply i have too many looks to show off in the reference sheets section. So see a outfit you like in a stream or videos and want a reference of it,.
-        Feel free to dm me for this or tag me in the server. (I might change the section to include all my outfits. Mabye in groups but not sure)
+        Let’s keep this one short and sweet~ 💖  
+        Every outfit of mine has **both a pregnant and non-pregnant version**,  
+        but not every single look has a full reference sheet (yet)!
+
+        Here’s where to find what:
+
+        🔹 <#962632624587808810> — **Non-pregnant reference sheets**  
+        🔹 <#1113790775269015563> — **Pregnant reference sheets**  
+        🔹 <#1291045909399863306> — **Project EliseMon** content, including all 18 type-based outfits!
+
+        ⚠️ Small notes:
+        1️⃣ **Project EliseMon** outfits currently don’t have pregnant versions.
+        2️⃣ Not *all* my outfits are listed — I’ve got a *lot*, hehe ✨
+
+        So if you saw a look you liked on stream or in a video and don’t see it in the ref section —  
+        feel free to **DM me or tag me in the server** 💌  
+        I might even update the section to include everything someday (maybe grouped up nicely~ we'll see).
+
+        With love,  
+        **Preggo Elise** 🎀
         `;
 
         const embed = createEmbed(

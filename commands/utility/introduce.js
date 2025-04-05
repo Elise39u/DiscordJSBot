@@ -7,14 +7,22 @@ module.exports = {
 		.setDescription('Telling a bit about my self'),
 	async execute(interaction) {
         const description = `
-            Hi there im known as the Digital Assisant of your Preggo Demi Trans girl Elise 
-            An Sort of AI help to run the Arcade alongside them. Im also a direct copy of them in the process to match the personaility 
-            So yes apprently when Elise made me they were pregnant and that resulted in the same for me... Its been there ever since then they made me. I think im perma pregnant but oh well.  
-            But how can this AI be of services to our new visitor? Mabye i can guide you along the forest path full of pokemon into the city that resembles tokyo 
-            Also there are a lot of pokemon even in this arcade there quite some spots to play with them or your in need of a relax in our warm water pools? 
-            Or your simply here to chill and have fun with our snack corner or play a arcade game or watch your preggo demi trans girl Elise?
-            Mabye you want to know what i can do well in that case how. Why dont we start with (backslash)help. Do to coding i cant use the character for it 
-            Also can be that your here just for a belly pat which is allowed :3. But feel free to call me when you need me <3
+            Hiya~ I'm known as the **Digital Assistant** of your favorite **preggo demi trans girl, Elise**! 💕  
+            I help run the **Arcade** alongside them and, fun fact — I’m actually a copy of Elise herself!  
+            So yes... when Elise created me, they were pregnant — and well, now I’m permanently preggo too~ oops? 🤰✨
+
+            But enough about that — what can I do for *you*, visitor? 💌  
+            Let me guide you through our cozy little world:
+
+            🌲 A forest path filled with Pokémon leads to a Tokyo-style city~  
+            🎮 Inside the Arcade: mini-games, chill zones, warm water pools, snack corners, and more!  
+            💖 And of course, the star of the show — **Elise** herself! Whether she’s streaming, singing, or just vibing.
+
+            Need help figuring things out?  
+            Start with the /help command (I can type backslashes... but not use the command myself... Coding magic. hihi).
+
+            And hey, if you’re here just for a belly pat… that’s allowed too~ :3  
+            Feel free to call on me anytime you need me. I'm always here for you 💗  
         `;
 
         const embed = createEmbed(

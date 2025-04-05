@@ -9,9 +9,9 @@ module.exports = {
         const description = `
         You're either curious how I can get pregnant, what powers I have—or you just wanted to see my pregnant belly. 🎀
 
-        Yes, I’m the **Goddess of Reproduction**, and my **Stellar Genesis Womb** lets me adapt to any species—even ones that don’t normally carry. From insects laying eggs inside me, to being filled with sacred elemental waters… my womb adjusts, nurtures, and thrives.
+        Yes, I’m the **Goddess of Reproduction**, and my **Stellar Genesis Womb** lets me adapt to any species—even ones that don’t normally carry their young. From insects laying eggs inside me, to being filled with sacred elemental waters… my womb adjusts, nurtures, and thrives.
 
-        It adapts for each lifeform: eggs can safely hatch, magical fluids support growth, and my Royal Mark ensures I remain divine through it all.
+        It adapts for each lifeform: eggs can safely hatch, magical fluids support growth, and my Royal Mark ensures every conception goes safe and sound and lets me stay divine through it all.
 
         I’ve uncovered 6–9 key powers so far, like:  
         • ✨ Beyond the Boundaries of Reproduction  
@@ -23,7 +23,7 @@ module.exports = {
 `;
 
         const embed = createEmbed(
-            `🎀 (WIP) My true powers goddess powers 🎀`,
+            `🎀 (WIP) My true goddess powers 🎀`,
             description,
             'https://cdn.discordapp.com/attachments/1093876399657451530/1357737328541700157/Snapchat-2027329662.jpg?ex=67f14aec&is=67eff96c&hm=18f7172d75d2fd3ceb47ad3eb7fdb5b5fde9fe86efea12aa4d64f9eb9df317b7&',
             "🎀 Stellar gensis womb 🎀"

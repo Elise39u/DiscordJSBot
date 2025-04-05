@@ -7,6 +7,10 @@ const { createEmbed } = require('../DiscordBot/commands/helpers/embedBuilder');
 const memberJoin = require("../DiscordBot/server/serverJoin")
 const memberLeave = require("../DiscordBot/server/serverLeave")
 
+//Needed to add the behaviour of introudction to the index.js file based if the bot is tagged:
+const mentionCooldown = new Set(); // anti-cooldown spam for the bot mention part
+const { handleBotMention } = require('./handlers/botMentionedHandler');
+
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, 
 	GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildPresences,
 	GatewayIntentBits.GuildEmojisAndStickers, GatewayIntentBits.GuildIntegrations
@@ -37,7 +41,7 @@ client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 	const channel = client.channels.cache.get('822837640872067082');
 	const embed = createEmbed(
-		`Digital Assistant v0.7 Has launched`,
+		`Digital Assistant v1.0 Has launched`,
 		`Mommy i have launched without any issues and im now live :3.`,
 		'https://cdn.discordapp.com/attachments/709057115159003156/1337417775429189673/Screenshot_74.png?ex=67a75edd&is=67a60d5d&hm=2df6b38df7e8995a49414dc34a8b875d2239cbd0dcbf01bc6c069cba4f65f656&'
 	);
@@ -48,32 +52,32 @@ client.once(Events.ClientReady, readyClient => {
         status: 'online',
         activities: [
             {
-                name: 'Scouring the lands of sumeru to see if its something for Elise',
+                name: 'The lands of sumeru to see if its something for Elise',
 				type: ActivityType.Watching
             }
         ]
     });
 });
 
-client.on(Events.InteractionCreate, async interaction => {
-	if (!interaction.isChatInputCommand()) return;
-	const command = interaction.client.commands.get(interaction.commandName);
+client.on(Events.MessageCreate, async (message) => {
 
-	if (!command) {
-		console.error(`No command matching ${interaction.commandName} was found.`);
-		return;
+	// Only trigger when bot is mentioned and it's not another bot
+	if (message.mentions.has(client.user) && !message.author.bot) {
+		// Check if user is on cooldown
+		if (mentionCooldown.has(message.author.id)) return;
+
+		// Apply cooldown (10 seconds => 1000 = 1 sec)
+		mentionCooldown.add(message.author.id);
+		setTimeout(() => {
+			mentionCooldown.delete(message.author.id);
+		}, 10000);
+
+		// Call the embed builder from the external file
+		const embed = handleBotMention(message.content);
+
+		// Reply with the embed
+		return message.reply({ embeds: [embed] });
 	}
-
-	try {
-		await command.execute(interaction);
-	} catch (error) {
-		console.error(error);
-		if (interaction.replied || interaction.deferred) {
-			await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
-		} else {
-			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-		}
-	};
 });
 
 client.on('guildMemberAdd', memberJoin.execute);

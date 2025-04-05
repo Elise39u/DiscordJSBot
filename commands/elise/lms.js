@@ -7,14 +7,22 @@ module.exports = {
 		.setDescription('explaning Elises their first adventure'),
 	async execute(interaction) {
         const description = `
-            I always thought this adventure was a dream, Something one only could wish off. 
-            That moment i ended up in the vocaloid dimension and was bound to its rules. But then i saw her.
-            A girl surronded by a group of what looked like humans... Greenish blue tigtales. 
-            A few years later and well were suppose to wait for luka who never showed up. Which lead us to an fun adventure.
-            A muscical adventure were we, yes me and miku fell in love and got married. Even at one point in the adeventure whrere well. 
-            I experinced my first true pregnancy which was funny but it all felt not real. So come with me and Miku on a journey.
-            The journey of my first adventure were i only not learn of my true powers but also my true prophecy and puropse as Goddes of Reproduction.
-            and the Gurdian of the sekais and identity. You can click the title to take you to the adventure playlist. :3 channel is <#1185957399673188402>
+            I always thought this adventure was just a dream — something too magical to be real.  
+            That moment I found myself in the **Vocaloid dimension**, bound to its strange yet beautiful rules... and then I saw her.  
+            A girl surrounded by others who looked human — with iconic greenish-blue twin tails.
+
+            A few years later, we were supposed to meet Luka... but she never showed.  
+            That led us on a journey — a **musical adventure** full of emotions, discovery, and surprises.
+
+            Yes, *me and Miku*. We fell in love. We got married. 💍  
+            And at one point during that adventure... I experienced my **first true pregnancy**.  
+            It felt surreal, funny, overwhelming — and yet somehow, it felt right.
+
+            Come with me and Miku as we revisit this journey — the one that helped me awaken my powers, discover my prophecy,  
+            and embrace my role as the **Goddess of Reproduction** and **Guardian of the Sekais and Identity**.
+
+            Click the title to watch the playlist on YouTube. This is where it all began.  
+            Start of the story in discord: <#1185957399673188402> 🎀
         `;
 
         const embed = createEmbed(
