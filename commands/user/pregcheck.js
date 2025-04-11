@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { createEmbed } = require('..//helpers/embedBuilder');
 const fs = require('fs');
 const path = './belly.json';
-const { cleanExpiredClones, isPregnant, formatPregnancyLine, getBellySize, hasRoomForMore, formatUserLine  } = require('../helpers/bellyUtils');
+const { cleanExpiredClones, isPregnant, formatPregnancyLine, getBellySize, hasRoomForMore, formatUserLine, isDivinePregnant  } = require('../helpers/bellyUtils');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -25,10 +25,40 @@ module.exports = {
             ? userList.map(formatUserLine).join('\n')
             : '*Nobody is inside yet~*';
 
-        const pregnancyLine = isPregnant(data)
-            ? `**Pregnancy?** ${formatPregnancyLine(data.pregnancy)}`
-            : '';
+            let pregnancyLine = '';
 
+            if (isDivinePregnant(data)) {
+                const preg = data.pregnancy;
+                let flavorText = '';
+            
+                switch (preg.species?.toLowerCase()) {
+                    case 'human':
+                        flavorText = 'She’s glowing and round~ You can almost feel the gentle kicks inside her soft belly~ 🍼';
+                        break;
+                    case 'eggs':
+                    case 'insect eggs':
+                    case 'dragon eggs':
+                        flavorText = 'Her belly is taut and pulsing... full of squirming, unhatched eggs~ Every shift makes her moan softly~ 🥚💗';
+                        break;
+                    case 'water baby':
+                    case 'elemental':
+                        flavorText = 'Her tummy sloshes with a gentle shimmer—pregnant with something *fluid, mystical*, and alive~ 🌊✨';
+                        break;
+                    case 'demonspawn':
+                        flavorText = 'There’s a faint glow, a demonic purr deep within~ She’s bearing dark and dangerous delights inside~ 🔥😈';
+                        break;
+                    case 'alien':
+                        flavorText = 'You can see the faint pulsing shapes shift beneath her belly... otherworldly life forms writhing in warmth~ 👽💦';
+                        break;
+                    default:
+                        flavorText = 'She’s looking full and divine~ Her belly tells a story of pleasure, life, and delicious weight~ 💖';
+                        break;
+                }
+            
+                pregnancyLine = `**Pregnancy?** ${formatPregnancyLine(preg)} 💕\n\n${flavorText}`;
+            } else {
+                pregnancyLine = ``;
+            }
         const description = `**Belly Size:** ${total} squirmer${total !== 1 ? 's' : ''}\n\n` +
             `${userLines}\n\n` +
             `${pregnancyLine}`;

@@ -21,6 +21,14 @@ function isPregnant(data) {
 }
 
 /**
+ * 
+ * Checks if im currently pregnant 
+ */
+function isDivinePregnant(data) {
+    return data?.pregnancy && typeof data.pregnancy === 'object' && data.pregnancy.amount > 0;
+}
+
+/**
  * Gets who Elise is pregnant by, if anyone, and it's within 24h.
  */
 function getPregnancySource(data) {
@@ -37,13 +45,13 @@ function getPregnancySource(data) {
 function formatPregnancyLine(pregnancyData) {
     if (!pregnancyData) return '';
 
-    const { by, amount, type, since } = pregnancyData;
+    const { by, amount, type, since, species } = pregnancyData;
     const pregTime = new Date(since).toLocaleString('en-GB');
 
     if (type === "clone") {
         return `🤰 Pregnant by **${by}** (clone) since \`${pregTime}\` ~ But there’s still *room for a snack or another clone*~ 💕`;
     } else {
-        return `🍼 Elise is carrying **${amount > 1 ? amount + ' babies' : 'a baby'}** from **${by}** since \`${pregTime}\`. She can’t devour or clone right now~ 💗`;
+        return `🍼 Elise is carrying **${amount > 1 ? amount + ' ' + species : 'a ' + species}** from **${by}** since \`${pregTime}\`. She can’t devour or clone right now~ 💗`;
     }
 }
 
@@ -83,4 +91,5 @@ module.exports = {
     getBellySize,
     hasRoomForMore,
     formatUserLine,
+    isDivinePregnant
 };
