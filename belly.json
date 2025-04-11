@@ -1,0 +1,5 @@
+{
+    "_comments": "In case of a non automatic reset... empty swallowedUsers to an empty arry to avoid errors in the code",
+    "isTooFullOrPregnant": false,
+    "swallowedUsers": []
+}

@@ -15,7 +15,8 @@ module.exports = {
         🎮 **Flight (Lost)** — Once soared as moon/star-shaped light, but lost this ability after being pulled to the sand planet.  
         🎮 **Time Freeze** — First discovered in a dream… that wasn’t a dream. Now learning to master time itself.  
         🎮 **Heterochromia** — Her ever-changing eye colors might be more than cosmetic—perhaps a lingering side effect?  
-        🎮 **Affection Field** — Elise’s mark unintentionally charms others. Some fall easily, others resist… the reason is unclear.  
+        🎮 **Affection Field** — Elise’s mark unintentionally charms others. Some fall easily, others resist… the reason is unclear. 
+        🎮 **Feminine Flux** — Their Royal Mark awakened Elise’s divine sensitivity to hormonal shifts. Even the slightest flutter—from HRT adjustments, fluttering heat, teasing arousal, to those needy pregnancy cravings—causes visible reactions. Her makeup blooms to match her Mark’s color, shifting with her mood, desires, and the life growing inside~ 💄💖
         🎮 **Stellar Genesis Womb** — A divine, multi-ability womb possibly linked to her being the Goddess of Reproduction. More powers await discovery...
         `;
 

@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { errorHandeler } = require('../helpers/errorHandler');
 const { createEmbed } = require('../helpers/embedBuilder');
+const { ELISE_ID } = process.env;
 
 // Set to track cooldowns (unauthorized users)
 const cooldown = new Set();
@@ -10,9 +11,7 @@ module.exports = {
 		.setName('todo')
 		.setDescription('this command is for Elise themself. An note on what they plan to do for their content-creation.'),
 	async execute(interaction) {
-        const eliseId = '203095887264743424';
-
-        if (interaction.user.id !== eliseId) {
+        if (interaction.user.id !== ELISE_ID) {
                 // Handle cooldown
                 if (!cooldown.has(interaction.user.id)) {
                     cooldown.add(interaction.user.id);
@@ -50,10 +49,9 @@ module.exports = {
             1. Rewrite <#962632709405032458> to fit the upcoming V3 and LMS lore 
             2. Rewrite <#797792369416208386> with the same reasons as 1.
             3. Make the YUME Diva video idea in editing 
-            4. Consider the idea of applying boobs size of your V3 outfit too Main V2 and V1 outfit? Mabye  poll ideas or?
-            5. Edit the reference sheet section to contain all the outfits that i used before. (Can be handy used in combination with point 4)
-            6. In case of if 5 and 4 are done. Consider making refernce sheets for the pregnant versions too (Learning to pose in blender?)
-            7. Rewrite most of the embed stories with help of CHATGPT... left at lms eliseSocials is not needed
+            4. Once V3 is on the planning update all the outfits to V3 booba size... Change everything to fit this change. 1,2,5 are part of this
+            5. Try to make Ref sheets for all the looks including pregnant and non pregnant versions. (Mabye try to learn posing in blender)
+            6. Mabye the idea that mark depends your lipstick full and eyeliner color? To gain more in line with your mark
         `;
 
         const embed = createEmbed(

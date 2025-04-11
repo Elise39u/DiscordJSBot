@@ -11,15 +11,27 @@ const keywordResponses = [
     },
     {
         trigger: ['who are you', 'who r u'],
-        response: `I'm Elise's digital assistant — a preggo-coded AI copy of her. Don't ask how... it just happened~ by her magical cloning powers 💞`
+        response: `I'm Elise's digital assistant — a preggo-coded AI copy of her. Don't ask how... it just happened~ by their magical cloning powers 💞`
     },
     {
         trigger: ['elise'],
-        response: `Oh? You said her name~ Elise is the heart of all this! Goddess of Reproduction, Gurdian of the Sekais and Identity, Vtuber cutie, and my creator i love my creator and them 💖`
+        response: `Oh? You said their name~ Elise is the heart of all this! Goddess of Reproduction, Gurdian of the Sekais and Identity, Vtuber cutie, and my creator i love my creator and them 💖`
     },
     {
         trigger: ['stream', 'live'],
         response: `Ooh, wondering about a stream? Elise might be live or planning one~ check the <#749939669210366022> or <#714444687012003911> channel! 📺✨`
+    },
+    {
+        trigger: ['lewd', 'horny', 'teasing'],
+        response: `Mmm, feeling bold?~ Preggo goddess Elise loves a lil teasing~ But be careful… she bites~ 💋✨`
+    },
+    {
+        trigger: ['clone', 'cloning'],
+        response: `Elise makes clones for *fun*~ but when they get naughty, she slurps them right back into her~ 😏💞`
+    },
+    {
+        trigger: ['vore', 'devour me', 'devour', 'vore Elise'],
+        response: `Mmm~ wanna be squished deep inside Elise’s warm preggo belly? She *loves* feeling you wriggle inside~ 💞🤰. Wanna be devoured or slurped up? Let me call my creator 😏`
     }
 ];
 
