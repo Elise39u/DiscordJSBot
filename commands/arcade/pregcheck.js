@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const { createEmbed } = require('..//helpers/embedBuilder');
+const { createEmbed } = require('../helpers/embedBuilder');
 const fs = require('fs');
 const path = './belly.json';
 const { cleanExpiredClones, isPregnant, formatPregnancyLine, getBellySize, hasRoomForMore, formatUserLine, isDivinePregnant  } = require('../helpers/bellyUtils');
@@ -19,6 +19,7 @@ module.exports = {
 
         const total = getBellySize(data);
         const userList = data.swallowedUsers || [];
+        const inflatedBellySize = data.bellySize;
 
         // Pregnancy section
         const userLines = userList.length > 0
@@ -50,6 +51,10 @@ module.exports = {
                     case 'alien':
                         flavorText = 'You can see the faint pulsing shapes shift beneath her belly... otherworldly life forms writhing in warmth~ 👽💦';
                         break;
+                    case 'Mech':
+                    case 'Robot':
+                    case 'Robot Mech':
+                        flavorText =  'You can hear the beep of a little mechinal machine in their womb... Even the robots are not safe from this beautifull goddess belly. 🔥💗💦'
                     default:
                         flavorText = 'She’s looking full and divine~ Her belly tells a story of pleasure, life, and delicious weight~ 💖';
                         break;
@@ -59,7 +64,8 @@ module.exports = {
             } else {
                 pregnancyLine = ``;
             }
-        const description = `**Belly Size:** ${total} squirmer${total !== 1 ? 's' : ''}\n\n` +
+        const description = `**Belly Size:** ${total} squirmer${total !== 1 ? 's' : ''}\n` +
+            `Belly has been inflated to **${inflatedBellySize}** ${inflatedBellySize.length !== undefined ? 'is the size of ' + inflatedBellySize.length + ' babies' : ''}\n\n` +
             `${userLines}\n\n` +
             `${pregnancyLine}`;
 

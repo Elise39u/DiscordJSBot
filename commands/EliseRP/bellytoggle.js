@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { createEmbed } = require('..//helpers/embedBuilder');
+const { createEmbed } = require('../helpers/embedBuilder');
 const fs = require('fs');
 const path = './belly.json';
 const { ELISE_ID } = process.env;

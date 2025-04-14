@@ -80,7 +80,7 @@ function formatUserLine(user) {
     const devouredAt = new Date(user.devouredAt).toLocaleString('en-GB');
     const isClone = user.username.includes("Clone-Elise");
     const action = isClone ? 'Got Elise pregnant at' : 'Devoured at';
-    return `• **${user.username}** - ${action}: \`${devouredAt}\``;
+    return `• **${user.username}** - ${action}: \`${devouredAt}\` and is still squirming💦`;
 }
 
 module.exports = {    
