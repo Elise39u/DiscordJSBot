@@ -34,7 +34,13 @@ function loadCommandsFromDirectory(directory) {
                 } else {
                     commandNames.add(commandName);
                     console.log(`✅ Loaded command from: ${filePath}`);
-                    commands.push(command.data.toJSON());
+                    const json = command.data.toJSON();
+                    if ( typeof json.name === 'string' && typeof json.description === 'string' && json.name.length <= 32 && json.description.length <= 100) {
+                        commands.push(json);
+
+                    } else {
+                        console.warn(`⚠️ Skipping invalid command at ${filePath} - name/description invalid`);
+                    }
                 }
             } else {
                 console.log(`⚠️ [WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
@@ -56,10 +62,24 @@ const rest = new REST().setToken(DISCORD_TOKEN);
     try {
         console.log(`Started refreshing ${commands.length} application (/) commands.`);
 
-        const data = await rest.put(
-            Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID),
-            { body: commands },
-        );
+        let data;
+        // Routes.applicationCommands(CLIENT_ID)
+        try {
+            data = await rest.put(
+                Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID), 
+                { body: commands },
+            );
+            console.timeEnd('register');
+            console.log(`✅ Successfully reloaded ${data.length} application (/) commands.`);
+        } catch (error) {
+            console.timeEnd('register');
+            console.error('❌ Error registering commands:');
+            if (error?.response?.data) {
+                console.dir(error.response.data, { depth: null });
+            } else {
+                console.error(error);
+            }
+        }
 
         console.log(`✅ Successfully reloaded ${data.length} application (/) commands.`);
     } catch (error) {

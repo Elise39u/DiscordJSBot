@@ -6,7 +6,9 @@ const bellyPictures = [
     'https://cdn.discordapp.com/attachments/1093876399657451530/1358746267618115717/Snapchat-1713200016.jpg?ex=67f4f692&is=67f3a512&hm=be9ad8bd4bae83ce42035cecfd7ee1454a4b34a72621bb4002d6f3080666ae60&',
     'https://cdn.discordapp.com/attachments/1093876399657451530/1357737328541700157/Snapchat-2027329662.jpg?ex=67f496ac&is=67f3452c&hm=c054de694f17c303374df4ee53f29f4f09e4fbc5db88daea390aaf34e15d5d5c&',
     'https://cdn.discordapp.com/attachments/1093876399657451530/1358746266716340416/Snapchat-1110008326.jpg?ex=67f4f692&is=67f3a512&hm=4bdf64c3f16b600c21da59b601d3672feaf9b9ed9dc3a208eb44c3e5b81a365e&',
-    'https://cdn.discordapp.com/attachments/1093876399657451530/1358746267324252241/Snapchat-1304575324.jpg?ex=67f4f692&is=67f3a512&hm=bace4afeb3ae054f6126fc27c96f3f1f4ec707f6f66a3459640693429908d2f0&'
+    'https://cdn.discordapp.com/attachments/1093876399657451530/1358746267324252241/Snapchat-1304575324.jpg?ex=67f4f692&is=67f3a512&hm=bace4afeb3ae054f6126fc27c96f3f1f4ec707f6f66a3459640693429908d2f0&',
+    'https://cdn.discordapp.com/attachments/1093876399657451530/1366349610507046962/Snapchat-2139031327.jpg?ex=68109fbc&is=680f4e3c&hm=30cff518d97c202eb2f4de7007e8dcbdfdef6c2602cba809ed06ec68320daaf8&',
+    'https://media.discordapp.net/attachments/1093876399657451530/1370001782574682142/Snapchat-687414354.jpg?ex=681de916&is=681c9796&hm=78ee6feb7ff5ae2cce198d8dd09fb8fa68a646589f7179174da96bdb0b1a00ba&=&format=webp&width=1463&height=823'
 ]
 
 module.exports = {

@@ -42,7 +42,9 @@ module.exports = {
             possessive: "💞 She wants you *inside*, safe and claimed. Once you’re hers, there’s no escape~",
             stuffed: "🍽️ So full… yet she eyes you like dessert. There's always room for just *one* more~",
             digesting: "🔥 Gurgles echo from her belly… She smirks. 'They’re being broken down nicely~ Want a preview?'",
-            gentle: "🌷 You’ll be swallowed in warmth, cuddled by her insides. Loving, tender... and oh-so-final~"
+            gentle: "🌷 You’ll be swallowed in warmth, cuddled by her insides. Loving, tender... and oh-so-final~",
+            watching: "👑 Careful now, sweetheart...  I'm in a *good* mood... don't ruin it because elise I’ll pin you down, swallow you whole — feeling every squirm as you *feed more than just my belly~* 😈🔥",
+            restingbelly: "🌙 Elise's belly is still... peaceful... *almost* merciful. But twitch wrong, mortal, and she'll gleefully gulp you down — stretching her divine tummy just to feel you struggle~ 😈💕"
         };
 
         const embed = createEmbed(

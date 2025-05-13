@@ -22,7 +22,7 @@ module.exports = {
             and embrace my role as the **Goddess of Reproduction** and **Guardian of the Sekais and Identity**.
 
             Click the title to watch the playlist on YouTube. This is where it all began.  
-            Start of the story in discord: <#1185957399673188402> 🎀
+            Start of the story in discord: <#1364916938245148753> 🎀
         `;
 
         const embed = createEmbed(

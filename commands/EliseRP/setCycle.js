@@ -40,7 +40,9 @@ module.exports = {
                     { name: 'Possessive', value: 'possessive' },
                     { name: 'Stuffed', value: 'stuffed' },
                     { name: 'Digesting', value: 'digesting' },
-                    { name: 'Gentle', value: 'gentle' }
+                    { name: 'Gentle', value: 'gentle' },
+                    { name: 'Watching', value: 'watching'},
+                    { name: 'Resting Belly', value: 'restingbelly'}
                 )
                 .setRequired(true)),
     async execute(interaction) {

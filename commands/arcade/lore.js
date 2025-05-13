@@ -10,7 +10,7 @@ module.exports = {
            Curious about my lore? Here's the current canon timeline 🩷
 
             My **prologue** begins with V3, diving deeper into my origins, powers, and the concept of <#1345430746789052496>.  
-            The story truly starts in <#1185957399673188402>, where I also first entered the sekais.
+            The story truly starts in <#1364916938245148753>, where I also first entered the sekais.
 
             During LMS, I received my sekai dresses in this order:
             <#1328320712712126546>, <#1328321706455990294>, <#1328322707078516806>, <#1328323629577932841>, and finally <#1328324657664884787>.

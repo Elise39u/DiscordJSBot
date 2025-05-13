@@ -24,7 +24,7 @@ module.exports = {
         const roll = Math.random();
         const voreChance = Math.random();
         const success = roll < 0.1;
-        const voreThem = voreChance < 0.05;
+        const voreThem = voreChance < 0.15;
 
         if (success) {
             data.bellySize = (data.bellySize || 0) + 1;

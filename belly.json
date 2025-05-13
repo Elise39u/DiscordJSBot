@@ -1,9 +1,21 @@
 {
   "_comments": "In case of a non automatic reset... empty swallowedUsers to an empty arry to avoid errors in the code",
   "isTooFullOrPregnant": false,
-  "swallowedUsers": [],
-  "fertilityCycle": "fertile",
-  "moodCycle": "serene",
-  "voreMood": "gentle",
-  "bellySize": 0
+  "swallowedUsers": [
+    {
+      "id": "524333654785392642",
+      "username": "kitsune5968",
+      "devouredAt": "2025-04-25T16:40:38.510Z"
+    }
+  ],
+  "fertilityCycle": "ovulating",
+  "moodCycle": "lustful",
+  "voreMood": "starving",
+  "bellySize": 0,
+  "fertilityBlessings": {
+    "524333654785392642": {
+      "by": "preggoelise",
+      "since": "2025-04-22T21:49:10.997Z"
+    }
+  }
 }

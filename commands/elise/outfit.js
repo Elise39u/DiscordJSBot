@@ -16,7 +16,7 @@ module.exports = {
             After that, there are my **10 Sekai dresses** (see <#962632624587808810>).  
             These outfits are themed around Miku, because in LMS I was closest to her.  
             Think of it like a bond or unit connection — kind of like how i am a close friend to Saki in Leo/Need 💫  
-            My **Visual Upgrades (VU)** are also based on these bonds with different unit members.
+            My **Brand new world (BN)** are also based on these bonds with different unit members.
 
             Every look I have comes in both **pregnant and non-pregnant versions** — yep, every single one!  
             You can find a collection of these in <#1113790775269015563> (though not all, I’ve got *too many*).  

@@ -35,7 +35,7 @@ module.exports = {
 
         const alreadySwallowed = data.swallowedUsers.some(u => u.id === user.id);
 
-        if (voreChance < 0.05 && !alreadySwallowed) {
+        if (voreChance < 0.15 && !alreadySwallowed) {
             const voreLine = `*Too tempting to resist...* 💗 I swallowed you whole, ${username}~ Now you’re mine... squirming inside my divine tummy~ Glorp~ 💞`;
             const newEntry = {
                 id: user.id,
