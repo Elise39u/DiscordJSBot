@@ -65,6 +65,7 @@ module.exports = {
   
         switch (choice) {
           case 'good_snack':
+            collector.stop();
             return i.update({
               content: `*Mmm~ such a good little thing.* Every touch sends shivers through my belly. Keep that up and I might just *reward you* later... 💞`,
               embeds: [], 
@@ -72,6 +73,7 @@ module.exports = {
             });
   
           case 'annoyed':
+            collector.stop();
             return i.update({
               content: `*Tch...* You call that worship? My belly deserves better. One more slip and you’ll be churned like the rest 😈`,
               embeds: [], 
@@ -79,6 +81,7 @@ module.exports = {
             });
   
           case 'reject':
+            collector.stop();
             return i.update({
               content: `*Ugh... no.* You're not even worth licking off my heel. Crawl away before I change my mind, little pest.`,
               embeds: [], 
@@ -102,6 +105,7 @@ module.exports = {
   
             fs.writeFileSync(path, JSON.stringify(data, null, 2));
   
+            collector.stop();
             return i.update({
               content: `*You reached out... and I opened wide~* One *gulp* and you're sealed away inside my divine belly, a new squirming treat in my sacred womb. Be a good snack now... or I might digest you 😏💖`,
               embeds: [], 
@@ -109,6 +113,7 @@ module.exports = {
             });
   
           case 'offer_seed':
+            collector.stop();
             return i.update({
               content: `*Oh?* Feeling brave? Mmm~ Maybe I'll *let you* offer your seed to my divine womb... if you beg prettily enough 💋`,
               embeds: [], 
@@ -116,6 +121,7 @@ module.exports = {
             });
   
           default:
+            collector.stop();
             return i.update({
               content: `I don’t recognize that offering. Try again, little snack.`,
               embeds: [], 
@@ -124,5 +130,11 @@ module.exports = {
             });
         }
       });
+
+       collector.on('end', async collected => {
+            if (collected.size === 0) {
+                await interaction.editReply({ content: '⏰ Time’s up! Sorry Mommy Elise dindt found you worthy enough', components: [] });
+            }
+        });
   }
 };

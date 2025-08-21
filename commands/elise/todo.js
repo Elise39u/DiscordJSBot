@@ -46,14 +46,14 @@ module.exports = {
         }
 
         const description = `
-            1. Make the YUME Diva video idea in editing 
-            2. Once V3 is on the planning update all the outfits to V3 booba size... Change everything to fit this change. 3, 4 are part of this *Currently working on: WIP**
-            3. Try to make Ref sheets for all the looks including pregnant and non pregnant versions. (Mabye try to learn posing in blender)
-            4. Mabye the idea that mark depends your lipstick full and eyeliner color? To gain more in line with your mark **Currently working on: WIP**
-            5. Rework the Visual upgrades into brand new day dresses with sekai stories more closer to card storys of the units.. Make it more foccused on the unit i got close too. 
-            6. Change Brand new school dress their hair.
-            7. https://www.color-meanings.com/neon-color-palettes/ See if this can be used back in the discord of color pallet 30.. Mabye logo or other visual ideas. 
-            8. Make an Ultimate Elise dress based on the idea of Ultimate Miku to fit the Gurdian lore idea and our true powers
+            1. Once V3 is on the planning update all the outfits to V3 booba size... Change everything to fit this change. 2, 3, 4 are part of this **Currently working on: WIP**
+            2. Try to make Ref sheets for all the looks including pregnant and non pregnant versions. (Mabye try to learn posing in blender) **Currently working on: WIP**
+            3. Mabye the idea that mark depends your lipstick full and eyeliner color? To gain more in line with your mark **Currently working on: WIP**
+            4. Rework the Visual upgrades into brand new day dresses with sekai stories more closer to card storys of the units.. Make it more foccused on the unit i got close too. 
+            5. Change Brand New sekais dresses to fit lore better like Empty and School ones hair. 
+            6. https://www.color-meanings.com/neon-color-palettes/ See if this can be used back in the discord of color pallet 30.. Mabye logo or other visual ideas. 
+            7. Stellar Type Elise (Type crystals as bottom and top line on lower part of dress, With the main crystal pointing to terapgoes heaxgones with types: https://admin.esports.gg/wp-content/uploads/2023/12/pokemon-scarlet-violet-stellar-type-1568x882.jpg)
+            8. Rewrite Elif lore to fit the Girly game arcade lore. Include your goddess powers too
         `;
 
         const embed = createEmbed(

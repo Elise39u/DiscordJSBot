@@ -1,21 +1,26 @@
 {
-  "_comments": "In case of a non automatic reset... empty swallowedUsers to an empty arry to avoid errors in the code",
-  "isTooFullOrPregnant": false,
-  "swallowedUsers": [
-    {
-      "id": "524333654785392642",
-      "username": "kitsune5968",
-      "devouredAt": "2025-04-25T16:40:38.510Z"
+    "_comments": "In case of a non automatic reset... empty swallowedUsers to an empty arry to avoid errors in the code",
+    "isTooFullOrPregnant": false,
+    "swallowedUsers": [
+        {
+            "id": "524333654785392642",
+            "username": "kitsune5968",
+            "devouredAt": "2025-06-17T15:52:58.174Z",
+            "isClone": false
+        }
+    ],
+    "fertilityCycle": "fertile",
+    "moodCycle": "moody",
+    "voreMood": "starving",
+    "bellySize": 0,
+    "fertilityBlessings": {
+        "524333654785392642": {
+            "by": "preggoelise",
+            "since": "2025-04-22T21:49:10.997Z"
+        },
+        "843597994305650708": {
+            "by": "preggoelise",
+            "since": "2025-06-01T21:22:35.413Z"
+        }
     }
-  ],
-  "fertilityCycle": "ovulating",
-  "moodCycle": "lustful",
-  "voreMood": "starving",
-  "bellySize": 0,
-  "fertilityBlessings": {
-    "524333654785392642": {
-      "by": "preggoelise",
-      "since": "2025-04-22T21:49:10.997Z"
-    }
-  }
 }

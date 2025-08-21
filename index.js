@@ -35,12 +35,18 @@ for (const folder of commandFolders) {
 	}
 }
 
+function sendDayMessage(channel, message, giflink) {
+	channel.send(message)
+}
+
 // When the client is ready, run this code (only once).
 // The distinction between `client: Client<boolean>` and `readyClient: Client<true>` is important for TypeScript developers.
 // It makes some properties non-nullable.
 client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 	const channel = client.channels.cache.get('822837640872067082');
+	const mainChannel = client.channels.cache.get('699557641818734638');
+
 	const embed = createEmbed(
 		`Digital Assistant v1.3 Has launched`,
 		`Mommy i have launched without any issues and im now live :3.`,
@@ -48,6 +54,32 @@ client.once(Events.ClientReady, readyClient => {
 	);
 
 	channel.send({ embeds: [embed] });
+
+	const TodayDate = new Date();
+	const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+	switch (weekdays[TodayDate.getDay()]) {
+	case "Sunday":
+		sendDayMessage(mainChannel, "Its Slowpoke sunday :3. Time to pat them :3", null)
+		break;
+	case "Monday":
+		sendDayMessage(mainChannel, ":o Its Miku Monday CALL ELISE QUICK", null)
+		break;
+	case "Tuesday":
+		sendDayMessage(mainChannel, "I have a few blocks lauying around.. Is it tetris tuseday already?", null)
+		break;
+	case "Wednesday":
+		sendDayMessage(mainChannel, "Guys & Girls Check the waters real quick... I heared on Wailord Wednesday there are more of them in there to spot", null)
+		break;
+	case "Thursday":
+		sendDayMessage(mainChannel, "Even as vocaloid herself.. Elise cant forget Teto thursday ofcourse XD", null)
+		break;
+	case "Friday":
+		sendDayMessage(mainChannel, "Okay okay okay listen up... Explain to my as clone and assistant of Elise.. What is funky? Because its funky friday XD", null)
+		break;
+	case "Saturday":
+		sendDayMessage(mainChannel, "YAWWWWWWWWNNNNNNN i go to bed since i heared its sleepy saturday good nap.", null)
+	}
 
 	client.user.setPresence({ 
         status: 'online',
@@ -105,10 +137,10 @@ client.on(Events.MessageCreate, async (message) => {
 		}, 10000);
 
 		// Call the embed builder from the external file
-		const embed = handleBotMention(message.content);
+		handleBotMention(message);
 
 		// Reply with the embed
-		return message.reply({ embeds: [embed] });
+		//return message.reply({ embeds: [embed] });
 	}
 });
 

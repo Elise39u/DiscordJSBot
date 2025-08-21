@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { createEmbed } = require('../helpers/embedBuilder');
+const { ELISE_ID } = process.env;
 
 const projectDivaResponse = [
     "🎤 Hatsune Miku says yes!",
@@ -24,9 +25,8 @@ const projectDivaResponse = [
     "🎤 Very doubtful, like the chance of seeing a live VOCALOID concert.",
 ];
 
-const EliseResponse = {
-    "203095887264743424": 
-    ["👍 It is certain, mama-to-be! 🤰",
+const EliseResponse =  [
+    "👍 It is certain, mama-to-be! 🤰",
     "🎱 It is decidedly so, a beautiful journey awaits! 🌈",
     "🔮 Without a doubt, you're glowing with joy! ✨",
     "🌟 Yes, definitely! Your journey is unique and amazing! 🌈",
@@ -46,9 +46,7 @@ const EliseResponse = {
     "🔒 My sources say no, but remember, love conquers all! ❤️",
     "🙅‍♀️ Outlook not so good, but your strength will carry you through! 🌟",
     "❗ Very doubtful, but believe in your resilience, mama! 🌸"
-],
-    //"987654321098765432": ["As your role suggests, the future is bright!", "Your path is clear!"] ROLE ID based mabye for the future?
-}
+]
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -64,9 +62,8 @@ module.exports = {
         let responses = projectDivaResponse;
         let choseResponse = "";
 
-        if (EliseResponse[userId]) {
-            responses = EliseResponse[userId];
-            choseResponse = responses[Math.floor(Math.random() * responses.length)]
+        if (userId === ELISE_ID) {
+            choseResponse = EliseResponse[Math.floor(Math.random() * EliseResponse.length)]
             let embed = createEmbed('Elise Preggo Ball Response', choseResponse, null, "8ball Creator response");
             await interaction.reply({ embeds: [embed] });
         } else {

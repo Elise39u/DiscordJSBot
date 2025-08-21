@@ -15,15 +15,15 @@ module.exports = {
             During LMS, I received my sekai dresses in this order:
             <#1328320712712126546>, <#1328321706455990294>, <#1328322707078516806>, <#1328323629577932841>, and finally <#1328324657664884787>.
 
-            The events in <#1153034890921644175> are remembered differently by others, but i strongly tought this was a dream.
+            The events in <#1390008445410742513> are remembered differently by others, but i strongly tought this was a dream.
             Together with LMS, this 2 lore channels forms my **vocaloid debut arc** — the transformation from fanloid to vocaloid.
 
-            After LMS, my personal sekai formed in <#1153067429249953852>, followed by discovering Elif’s sekai with my wife in <#1157983522418597923>.
+            After LMS, my personal sekai formed in <#1392542648027447376>, followed by discovering Elif’s sekai with my wife in <#1157983522418597923>.
 
-            My visual upgrades for the sekais went as follows:  
+            My visual upgrades(brand new sekais WIP) for the sekais went as follows:  
             <#1200201844350259211> → <#1209546893919789077> → <#1257085336555753614> → <#1212050830308679710> → <#1227552953653530625> → <#1236658845955129344>
 
-            All of this forms the canon story of how I became the **Goddess of Reproduction** and **Guardian of the Sekais & Identity**.
+            All of this forms the canon story of how I became the **Goddess of Reproduction** and **Guardian of the Identity while Miku became the Guardian of Sekais**.
 
             Need to know what’s *not* canon? Use the /nonlore command :3
         `;

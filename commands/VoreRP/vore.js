@@ -4,14 +4,8 @@ const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = re
 const { createEmbed } = require('../helpers/embedBuilder');
 const { ELISE_ID, ELISE_ID_MENTION } = process.env;
 const { cleanExpiredClones } = require('../helpers/bellyUtils');
-
-const randomIMGs = [
-    'https://media.discordapp.net/attachments/1093876399657451530/1361262470055989369/Snapchat-607535797.jpg?ex=67fe1df7&is=67fccc77&hm=d8fd6376a8aaae3ceebb00efdd6434bf460b4cb491463ec5abd2b918dbeb1bd3&=&format=webp&width=1463&height=823',
-    'https://media.discordapp.net/attachments/1093876399657451530/1359470121269329920/Snapchat-875588561.png?ex=67f798b6&is=67f64736&hm=dab90d897c69b40d886ad3760c024cd48b405976f0b2ad3aa59acc7e35045747&=&format=webp&quality=lossless&width=1463&height=823',
-    'https://cdn.discordapp.com/attachments/1093876399657451530/1363094060763578439/Snapchat-471598124.jpg?ex=6804c7c5&is=68037645&hm=e498f4c3bf0c55a13d5ad5639602e48a08871f7a21a6a52ac69f2d19f2202ee0&',
-    'https://media.discordapp.net/attachments/1093876399657451530/1363439369779806399/Snapchat-446356551.jpg?ex=6806095d&is=6804b7dd&hm=97c3d4e163c23e688aea7e2c909f5022da1ceff2db974ffbbf825be6f60b025b&=&format=webp&width=1463&height=823',
-    'https://cdn.discordapp.com/attachments/1093876399657451530/1366349610217635930/Snapchat-394441364.jpg?ex=68109fbc&is=680f4e3c&hm=9d145f88ee3a59252724c0d33f6542ebc3f8cd1f18b14efe5d8c119a2b49201c&'
-];
+const voreBellyImages = require('../Assets/voreBellyPictures.json');
+const { getImageByTag } = require('../helpers/bellyImageHandler')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -26,6 +20,15 @@ module.exports = {
             option.setName('clone')
                 .setDescription('Are you a clone of Elise? 👀')
                 .setRequired(false)
+        )
+        .addStringOption(option =>
+            option.setName('entry')
+                .setDescription('How do you want to enter Elise’s belly?')
+                .setRequired(false)
+                .addChoices(
+                    { name: 'Devour me 💋', value: 'devour' },
+                    { name: 'Crawl your way inside (Unbirth) 🐾', value: 'crawl' }
+                )
         ),
     async execute(interaction) {
         const targetUser = interaction.options.getUser('target');
@@ -37,6 +40,7 @@ module.exports = {
         const targetName = targetUser?.username || actingUser.username;
         const isSelf = targetId === actingUser.id;
         const isClone = interaction.options.getBoolean('clone') || false;
+        const entryMethod = interaction.options.getString('entry') || 'devour';
 
         // Read or create status file
         let data = { isTooFullOrPregnant: false, swallowedUsers: [] };
@@ -94,20 +98,31 @@ module.exports = {
             "Mmm~ You’re stretching me out so *deliciously* from the inside~ Keep squirming like that and I just might keep you in longer than a day... 💦💗",
             "Oh? Already whining from inside? You asked to be devoured—now be a good little meal and *stay round in my belly* where I can feel you pulse~ 💋✨",
         ]
-
+        const crawlFlavored = [
+            "That's it~ On your hands and knees like a good pet. Crawl into my belly where you *belong* — nice and slow, so I can savor every inch~ 💦",
+            "Didn't even need to lift a finger~ You're already crawling into my womb like the needy little prey you are. I *love* that in a meal~ 💋",
+            "Mmm~ Watching you push yourself inside me is such a *turn on*. Keep going... deeper… round me out from the inside~ 💗",
+            "Such obedience~ You’re so desperate to be mine, you’re climbing right into your soft prison~ My belly's waiting, and it doesn't let go~ 😘",
+            "Begging wasn't needed — your actions told me everything. Now crawl in, slowly… I want to feel every movement as you settle inside where you *truly* belong~ 🔥",
+            "You chose this, love~ Now don’t stop. Feel me stretch around you as you disappear inside. My belly *owns* you now, and you’ll feel that with every squirm~ ✨",
+            "So needy… so desperate to be swallowed whole without even a gulp. Go on, make yourself part of my roundness~ You’re not leaving until I say so~ 💖"
+        ];
+        
         let selected;
         const chance = Math.random();
-        const imgLink = randomIMGs[Math.floor(Math.random() * randomIMGs.length)];
+        const devourFlavored = [...sweet, ...teasing, ...spicy];
+        const imgLink = getImageByTag(voreBellyImages, entryMethod);
     
         if (chance <= 0.01) {
             selected = nsfwRare[Math.floor(Math.random() * nsfwRare.length)];
         } else {
-            const all = [...sweet, ...teasing, ...spicy];
-            selected = all[Math.floor(Math.random() * all.length)];
+            const pool = entryMethod === 'crawl' ? crawlFlavored : devourFlavored;
+            selected = pool[Math.floor(Math.random() * pool.length)];
         }
 
+        const entryCheck = entryMethod === 'crawl' ? "💖 Crawled into Elise 💖" : "💖 Devoured by Elise 💖";
         const embed = createEmbed(
-            `💖 Devoured by Elise 💖`,
+            entryCheck,
             selected,
             imgLink,
             `✨ You look so nice and round in my womb ✨`
@@ -162,9 +177,11 @@ module.exports = {
                 .setStyle(ButtonStyle.Danger)
         );
 
+        const promtRequestTitle = entryMethod === 'crawl' ? "🥺 Unbirth Request 🥺" : "🥺 Devour Request 🥺";
+        const promptDescription = entryMethod === 'crawl' ? `${targetName} wants to crawl into your belly~ 💖 Accept or Deny within 1min Mommy Elise` : `${targetName} wants to be devoured~ 💖 Accept or Deny within 1min Mommy Elise`
         const promptEmbed = createEmbed(
-            `🥺 Devour Request 🥺`,
-            `${targetName} wants to be devoured~ 💖 Accept or Deny within 1min Mommy Elise`,
+            promtRequestTitle,
+            promptDescription,
             null,
             `React fast~ Belly’s waiting.`
         );
@@ -186,7 +203,15 @@ module.exports = {
                     devouredAt: new Date().toISOString()
                 });
                 fs.writeFileSync(path, JSON.stringify(data, null, 4));
-                await i.update({ content: `💗 Dont struggle now ${targetName} come here sweetie. \n *Gulp, Gulp gulp..*\n ${targetName} has been lovingly swallowed and you were sure tastu~`, embeds: [embed], components: [] });
+                let bellyContent;
+
+                if (entryMethod === 'crawl') {
+                    bellyContent = `💗 Ohh~ ${targetName}... crawling in like the perfect little plaything you are~ \nEvery inch of you pressing in deeper… slow and obedient~ That’s it, fill me up from the *inside*.\nYou're staying in there, nice and round — because I said so~ 💋`;
+                } else {
+                    bellyContent = `💗 Mmm~ ${targetName}, you should’ve known better than to tempt me~ \n *Gulp, gulp... gulp* — and just like that, you’re mine.\nCurled up inside me, stretching me out deliciously~ No escape now, darling~ 😘`;
+                }
+
+                await i.update({ content: bellyContent, embeds: [embed], components: [] });
             } else if (i.customId === `deny_${actingUser.id}`) {
                 await i.update({ content: `❌ ${targetName}'s request was denied.`, components: [] });
             }
