@@ -13,12 +13,18 @@ module.exports = {
         const targetUser = interaction.options.getUser('user') || interaction.user;
         const targetMember = await interaction.guild.members.fetch(targetUser.id);
 
-        // Check if the user has a guild avatar
-        const avatarURL = targetMember.avatar 
-            ? `https://cdn.discordapp.com/guilds/${interaction.guild.id}/users/${targetUser.id}/avatars/${targetMember.avatar}.png?size=512`
-            : targetUser.displayAvatarURL({ dynamic: true, size: 512 });
+        // Check for guild avatar first
+        let avatarURL;
+        if (targetMember.avatar) {
+            avatarURL = targetMember.displayAvatarURL({ dynamic: true, size: 512 });
+        } else {
+            avatarURL = targetUser.displayAvatarURL({ dynamic: true, size: 512 });
+        }
 
-        const embed = createEmbed(`I found ${targetUser.username}'s Avatar`, " ", avatarURL);
+        // Use nickname if available, otherwise username
+        const displayName = targetMember.nickname || targetUser.username;
+
+        const embed = createEmbed(`I found ${targetUser.username}'s Avatar`, " ", avatarURL, "🎀 The avtar of " + displayName + " for you 🎀");
         await interaction.reply({ embeds: [embed] });
     },
 };

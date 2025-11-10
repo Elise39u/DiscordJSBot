@@ -1,0 +1,38 @@
+{
+    "_comments": "In case of a non automatic reset... empty swallowedUsers to an empty arry to avoid errors in the code",
+    "isTooFullOrPregnant": false,
+    "swallowedUsers": [
+        {
+            "id": "524333654785392642",
+            "username": "kitsune5968",
+            "devouredAt": "2025-06-17T15:52:58.174Z",
+            "isClone": false
+        },
+        {
+            "id": "1202478535676006491",
+            "username": "tonymystery217",
+            "isClone": false,
+            "devouredAt": "2025-10-03T17:22:19.259Z"
+        },
+        {
+            "id": "919931116771754015",
+            "username": "yellownovice",
+            "isClone": false,
+            "devouredAt": "2025-11-05T21:17:16.877Z"
+        }
+    ],
+    "fertilityCycle": "fertile",
+    "moodCycle": "serene",
+    "voreMood": "gentle",
+    "bellySize": 0,
+    "fertilityBlessings": {
+        "524333654785392642": {
+            "by": "preggoelise",
+            "since": "2025-04-22T21:49:10.997Z"
+        },
+        "843597994305650708": {
+            "by": "preggoelise",
+            "since": "2025-06-01T21:22:35.413Z"
+        }
+    }
+}

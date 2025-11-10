@@ -7,31 +7,30 @@ module.exports = {
 		.setDescription('My creators their powers'),
 	async execute(interaction) {
         const description = `
-            🎮 **Teleportation** --> As seen in LMS. Elise has gotten teleportation powers to telport around the world   
-            🎮 **Elemetal powers** --> Her home world has elemetal powers and she was able to use all 7 of them in a war never stopped fighting or was this the genshin adventure *coming soon*?   
-            🎮 **Idol powers** --> Her Orgins mark gives her idol powers which she doesnt understand fully but only can feel  
-            🎮 **Vocaloid world powers** --> After learning how to become an idol as fanloid in LMS. She also transformed into a vocaloid instead of a fanloid. But also falling to
-            the same things you see in project diva.
-            🎮 **Portal powers** --> Used to travel to the sekais and back between your guys and girls world and the vocaloid world.  
-            🎮 **Flight** --> Elise lost this power after she felt down to sand planet where her entry to the vocaloid realm began. She used to travel in a moon shaped symbol or star   
-            🎮 **Time stopping** --> Elise learned in a dream that she can stop time.. But the dream dindt turn out to be a dream but real. Now she is learning to harvest this power on a journey  
-            🎮 **Chaning Eye Colors** --> I dont think its a power but her eye colors keep chaning and even are not the same as each other. Must be a side effect   
-            🎮 **Hormone infleunce**  --> She always learned that the mark had a infleunce in her hormone treatment. Even making it work better then people expected. Growing to an E-G size on her homne planet but shriking again
-            Until aqquired her full powers again 
-            🎮 **Affection powers** --> Her mark seems to have an affection on you humans. Making some of the easly in love with Elise but others resist it. Guess it handy with that to be poly.   
-            🎮 **Fertilazation powers**  --> Elise gotten a utures on her home planet and her Mark seems to influence it a bit too much. Making her highly fertile and easly pregnant   
-            🎮 **Inflation powers** --> Apprently my creator can inflate her belly when ever she wanted. So she can look pregnant when ever she want. 
-            🎮 **Pregnancy powers** --> Something you will learn in LMS but Elise her species can feel how long they are pregnant.  
-            🎮 **Stellar Genesis Womb** --> Apprently the Mark made her utures a special one. You will learn in the LMS adventure its true power.
-            
-            That are the recorded powers so far.. But dont worry if you have question feel free to ask Elise directly. But the Stellar Genesis Womb was something not explained to me 
-            It felt Elise either dint understand its true power or Elise wants to keep its powers as secret. Mabye the Stellar Gensis Womb makes her also highly fertile?
+        🎮 **Elemental Control** — Master of all 7 elements from her origin world, often tied to an ongoing war... or maybe a Genshin-like tale? (*coming soon*) 
+        🎮 **Portal Travel** — Can move between your world, the sekais, and the vocaloid realm using dimensional portals and other dimensions.  
+        🎮 **Flight (Lost)** — Once soared as moon/star-shaped light, but lost this ability after being pulled to the sand planet.  
+        🎮 **Heterochromia** — Her ever-changing eye colors might be more than cosmetic—perhaps a lingering side effect?  
+        🎮 **Stellar Genesis Womb** — A divine, multi-ability womb possibly linked to her being the Goddess of Reproduction/Fertility. More powers await discovery...
+        🎮 **Sacred Voice powers** - As Sacred Voice, Elise holds immense vocaloid idol powers. Her true power as Guardian of the Sacred voices is unknown but one of them is: The ability to change outfit on will with the crystal of project diva x or the teleportion used in LMS which she used to teleport frelly across the world. Part of this transformation was being recongized and transformed to Vocaloid in LMS.
+        🎮 **Royal mark powers** - Her royal mark on her cleavage grants elise ordinary powers. From an idol aura that they yet have to learn to understandad, to an affection field charming others while some resist a lot fall, to a hidden time freeze ability, to a femine flux affectin their makeup in weird ways. Its even said Elise her mark has a hormonal influence on them making them really senstive to in the progress.  
         `;
 
+        const description2 = `
+        🎮 **Elemental Control** — Master of all seven elements from her origin world, forever tied to a lingering war… or perhaps a Genshin-like saga yet to be told? (*coming soon*)  
+        🎮 **Portal Travel** — Slips seamlessly between your world, the sekais, and the Vocaloid realm through dimensional gates.  
+        🎮 **Flight (Lost)** — Once soared like a star-shaped light across the skies, but lost this gift after being bound to the sand planet.  
+        🎮 **Heterochromia** — Her ever-shifting eye colors are no mere ornament… they whisper of lingering side effects and hidden truths.  
+        🎮 **Stellar Genesis Womb** — A divine, multi-faceted womb that marks her as the Goddess of Reproduction and Fertility. Its true powers remain shrouded in mystery, waiting to be awakened~.  
+        🎮 **Sacred Voice** — As the Sacred Voice, Elise wields immense vocaloid idol powers. With a single note, she shifts outfits at will through the Project Diva X crystal, or vanishes in an instant with the teleportation she once flaunted in LMS. One song, one step—and the world bends to her rhythm.  
+        🎮 **Royal Mark** — Etched upon her cleavage, this mark grants Elise intoxicating powers: an idol’s radiant aura, a charm that ensnares hearts, the ability to freeze time itself… and a feminine flux that alters her beauty in unpredictable ways. Some whisper it even heightens her hormones, leaving her deliciously sensitive~.  
+        `;
+        
         const embed = createEmbed(
             `Preggo Elise Their powers. Let me summarize `,
             description,
-            'https://cdn.discordapp.com/attachments/709057115159003156/1337427012238839808/image.png?ex=67a76777&is=67a615f7&hm=6272fe4bfcefc809bf279e3b9ea97a38f4cf1d43bc19c893123e5731113c6d43&'
+            'https://cdn.discordapp.com/attachments/709057115159003156/1337427012238839808/image.png?ex=67a76777&is=67a615f7&hm=6272fe4bfcefc809bf279e3b9ea97a38f4cf1d43bc19c893123e5731113c6d43&',
+            "🎀 My creator their offical powers as been found been in <#1152967259225075803> 🎀"
         );
 
 	    await interaction.reply({ embeds: [embed] });
