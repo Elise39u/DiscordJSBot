@@ -3,10 +3,10 @@ const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits, ActivityType, Guild } = require('discord.js');
 require('dotenv').config();
 const { DISCORD_TOKEN } = process.env;
-const { createEmbed } = require('../DiscordBot/commands/helpers/embedBuilder');
-const memberJoin = require("../DiscordBot/server/serverJoin");
-const memberLeave = require("../DiscordBot/server/serverLeave");
-const hormonalsurge = require('./commands/Elise/hormonalTrigger');
+const { createEmbed } = require('../DiscordJSBot/commands/helpers/embedBuilder');
+const memberJoin = require("../DiscordJSBot/server/serverJoin");
+const memberLeave = require("../DiscordJSBot/server/serverLeave");
+const hormonalsurge = require('../DiscordJSBot/commands/Elise/hormonalTrigger');
 
 //Needed to add the behaviour of introudction to the index.js file based if the bot is tagged:
 const mentionCooldown = new Set(); // anti-cooldown spam for the bot mention part
@@ -69,7 +69,7 @@ client.once(Events.ClientReady, readyClient => {
 		sendDayMessage(mainChannel, "I have a few blocks lauying around.. Is it tetris tuseday already?", null)
 		break;
 	case "Wednesday":
-		sendDayMessage(mainChannel, "Guys & Girls Check the waters real quick... I heared on Wailord Wednesday there are more of them in there to spot", null)
+		sendDayMessage(mainChannel, "Guys, Girls, Non-binary pals Check the waters real quick... I heared on Wailord Wednesday there are more of them in there to spot", null)
 		break;
 	case "Thursday":
 		sendDayMessage(mainChannel, "Even as vocaloid herself.. Elise cant forget Teto thursday ofcourse XD", null)

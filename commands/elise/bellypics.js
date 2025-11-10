@@ -37,7 +37,9 @@ module.exports = {
                     { name: 'black', value: 'black' },
                     { name: 'loose_shirt', value: 'loose_shirt' },
                     { name: 'white', value: 'white'},
-                    { name: "dress", value: "dress"}
+                    { name: "dress", value: "dress"},
+                    { name: "teal green", value: "teal_green"},
+                    { name: "light_blue", value: "light_blue"},
                 ).setRequired(false)
         ),
     async execute(interaction) {

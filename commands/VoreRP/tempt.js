@@ -3,7 +3,7 @@ const { createEmbed } = require('../helpers/embedBuilder');
 const { ELISE_ID, ELISE_ID_MENTION } = process.env;
 const fs = require('fs');
 const path = './belly.json';
-const { getRandomVoreImage } = require('../helpers/bellyImageHandler')
+const { getImageByTag } = require('../helpers/bellyImageHandler')
 
 // Utility to load and save belly data
 function loadBellyData() {
@@ -29,7 +29,7 @@ module.exports = {
       return interaction.reply({ content: 'You’re already inside, darling~ My belly’s enjoying you 💕. Squirm a bit harder please darling', ephemeral: true });
     }
 
-    const imgLink = getRandomVoreImage();
+    const imgLink = getImageByTag("devour");
     const embed = createEmbed(
         `💖 Devoured by Elise 💖`,
         `You walked right into it, ${user.username}~ Now you’re tucked away in my divine belly, squirming like the treat you are 😘`,

@@ -1,6 +1,8 @@
 const bellyPictures = require('../Assets/bellyPictures.json');
 const voreBellyImages = require('../Assets/voreBellyPictures.json');
 const pregnantPictures = require('../Assets/pregnantPictures.json');
+const vtuberPictures = require('../Assets/vtuberPictures.json');
+const url = "";
 
 function getRandomImage(images) {
   return images[Math.floor(Math.random() * images.length)].url;
@@ -21,10 +23,16 @@ function getImageByCategory(category) {
   return source ? getRandomImage(source) : null;
 }
 
+function getVtuberImageByURl(url) {
+  return vtuberPictures.find(img => img.url === url) || null;
+}
+
 module.exports = {
   getRandomBellyImage: () => getRandomImage(bellyPictures),
   getRandomVoreImage: () => getRandomImage(voreBellyImages),
   getRandomPregnantPicture: () => getRandomImage(pregnantPictures),
+  getRandomVtuberImage: () => getRandomImage(vtuberPictures),
+  getVtuberImageByURl: (url) => getVtuberImageByURl(url),
   getImageByTag,
   getImageByCategory,
 };

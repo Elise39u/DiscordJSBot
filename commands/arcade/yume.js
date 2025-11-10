@@ -22,10 +22,15 @@ module.exports = {
             LMS will eventually explain everything, but for now — just know that Miku is my first (and maybe truest) partner. :3
         `;
 
+        const imgArray = ['https://cdn.discordapp.com/attachments/1093876399657451530/1355831333678616586/English_ver.png',
+            'https://cdn.discordapp.com/attachments/1093876399657451530/1429120326561828945/20250918_092400.png'
+        ]
+        let image = imgArray[Math.floor(Math.random() * imgArray.length)];
+        
         const embed = createEmbed(
             `🎀 Elise and Miku what the deal between them? 🎀`,
             description,
-            'https://cdn.discordapp.com/attachments/1093876399657451530/1355831333678616586/English_ver.png?ex=67ea5bd4&is=67e90a54&hm=5c91c2c71153fee26fe7414a60f40ef1953089fe2d2f65856189314f54159330&',
+            image,
             "🎀 Elsie their yume sheet.🎀"
         );
 	    await interaction.reply({ embeds: [embed] });

@@ -147,6 +147,10 @@ module.exports = {
                 return await interaction.reply({ content: `😋 ${targetName} is already squirming in your belly~` });
             }
 
+            if(targetUser.id === ELISE_ID) {
+                return await interaction.reply({ content: '😤 You can’t devour yourself, silly~ Use `/devourme target:@user` On someone else if your hungry 😘~ 💕' });
+            }
+
             data.swallowedUsers.push({
                 id: targetId,
                 username: targetName,

@@ -26,7 +26,7 @@ module.exports = {
              response = "I have a few blocks lauying around.. Is it tetris tuseday already?"
             break;
         case "Wednesday":
-            response ="Guys & Girls Check the waters real quick... I heared on Wailord Wednesday there are more of them in there to spot"
+            response ="Guys, Girls, Non-binary pals Check the waters real quick... I heared on Wailord Wednesday there are more of them in there to spot"
             break;
         case "Thursday":
             response ="Even as vocaloid herself.. Elise cant forget Teto thursday ofcourse XD"

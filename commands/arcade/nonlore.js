@@ -7,15 +7,15 @@ module.exports = {
 		.setDescription('🎀 Why arent some things lore? 🎀'),
 	async execute(interaction) {
         const description = `
-            Lore is bMy lore has evolved over the past 5–6 years — starting with transformation stories and growing into a clear vision of who I am: the Goddess of Reproduction and Guardian of the Sekais and Identity.
+            My lore has evolved over the past 5–6 years — starting with transformation stories and growing into a clear vision of who I am: the Goddess of Reproduction/Fertility and Guardian of Identity, while also apparently being a Sacred Voice.
 
-            With that evolution, some parts of older lore conflict with my current story. For example, <#1160629986949075105> and parts of the pregnancy arc in <#1157983522418597923> are partially valid but not fully canon.
+            With that evolution, some parts of older lore conflict with my current story. For example, <#1160629986949075105> and parts of the pregnancy arc in <#1157983522418597923> are partially valid but not fully canon. (Elif original lore channel deleted due to rewritten of the lore...)
 
-            Why? Because the truth lies in <#1345430746789052496> — it's the *real* reason I can get pregnant. I got utures with sugery during my HRT, yes, but not due to a transformation. On my origin planet, I also started HRT, and thanks to my Royal Mark, I responded *extraordinarily well* to the hormones.
+            Why? Because the truth lies in <#1345430746789052496> — it's the *real* reason I can get pregnant. I cant remeber if i got during my HRT treatment... or thaat my Royal mark has some ordinary powers.
 
             There are still lore inconsistencies here and there, but if you follow the timeline shared in the /lore command, it should all make sense! 💖
 
-            And yes… over these 5–6 years, I've had 3–4 pregnancies — oops! 😳
+            And yes… over these 5–6 years, I've had 3 pregnancies oops! But i might be pregnant again already? Who knows.... 💖 😳
 
             To recap:
             1️⃣ Some previously mentioned lore isn't 100% canon anymore.
@@ -26,7 +26,7 @@ module.exports = {
         `;
 
         const embed = createEmbed(
-            `What happend when you make lore for 5 years?`,
+            `What happend when you make lore for 5 years? (**WIP** Getting a rework due to new lore changes.)`,
             description,
             'https://cdn.discordapp.com/attachments/1093876399657451530/1356233917610328094/20250322104526_1.jpg?ex=67ebd2c3&is=67ea8143&hm=aa1d8124df025bf8e6ad3b60bb1bdfe6fa8e2aa468a7d41f00ad8768865f2a38&',
             "🎀 Why i choose for the image of myself now and consider some lore uncanon? 🎀"

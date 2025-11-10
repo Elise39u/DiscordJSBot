@@ -34,6 +34,10 @@ module.exports = {
                 content: `💖 Ooooh~ Naughty thing... You *do* know how to please your Goddess ${ELISE_ID_MENTION}~ My belly just grew a little rounder thanks to you~ Keep teasing, and maybe I’ll let you rub it before I make you part of it 😘`,
             });
         } else {
+            if (data.swallowedUsers.find(u => u.id === user.id)) {
+                return interaction.reply({ content: 'You’re already inside, darling~ My belly’s enjoying you 💕. Squirm a bit harder please darling', ephemeral: true });
+            }
+
             if (voreThem) {
                 data.swallowedUsers = data.swallowedUsers || [];
                 data.swallowedUsers.push({
