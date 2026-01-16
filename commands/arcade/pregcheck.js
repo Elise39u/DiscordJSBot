@@ -55,6 +55,12 @@ module.exports = {
                     case 'Robot':
                     case 'Robot Mech':
                         flavorText =  'You can hear the beep of a little mechinal machine in their womb... Even the robots are not safe from this beautifull goddess belly. 🔥💗💦'
+                        break;
+                    case 'Divine Goddess/God':
+                    case 'Divine':
+                    case 'Divine Goddess':
+                    case 'Divine God':
+                        flavorText = 'Their divine glow intensifies as life stirs within~ They are carrying a sacred being for their home world, destined for greatness~ 🌟👼';
                     default:
                         flavorText = 'She’s looking full and divine~ Her belly tells a story of pleasure, life, and delicious weight~ 💖';
                         break;

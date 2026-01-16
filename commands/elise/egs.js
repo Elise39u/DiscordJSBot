@@ -1,30 +1,45 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { createEmbed } = require('../helpers/embedBuilder');
+const { getImageByTag } = require('../helpers/bellyImageHandler');
+const projectDivaPictures = require('../Assets/projectDivaPictures.json');
+
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('egs')
 		.setDescription('what does EGS stand for in the youtube series. '),
 	async execute(interaction) {
+        let randomImage = getImageByTag(projectDivaPictures, "egs");
+                if (!randomImage) {
+                    return await interaction.reply({
+                        content: `❌ No image found with tag \`egs\`.`,
+                        ephemeral: true
+                    });
+            }
+
         const description = `
-            Curious about what EGS stands for? It means **Elise Gender Story** — or simply, my transgender journey. 🌸
+                Curious about EGS? It stands for **Elise Gender Story** my journey on earth as a trans girl from another world. 🌸
 
-            Even though I have special powers and a unique role in this world, being seen and accepted as a trans girl on Earth is still really hard. I mean, by your world's rules, I shouldn’t be able to get pregnant — yet here I am. So how did it come to this?
+                Even with godly powers, being a trans girl who can get pregnant is a journey that defies nature. I’m here to share how I navigated identity, sexuality, and the struggle of answering: *Who am I? Why am I here?*
 
-            What led me to reveal my identity, my powers… and why do I still struggle with understanding who I truly am? What *am* I? Why *am* I here?
+                ✨ **What is EGS?**
+                It’s a raw look at my experiences from my initial 2-year transition of when i accepted my transgender side to a recap of growth as a pregnant transgirl on earth and **Guardian of Identity**. I hope my story inspires you on your own path of self-discovery!
 
-            **EGS** is about all of that. My real experiences — from a quick 2-year recap of what led to my big decision, to deeper topics like identity, sexuality, and even something new: my upcoming *preggo neopronoun* idea.
+                🤰 **The Preggo Identity**
+                I use **Preggo/They/She** pronouns. My journey explores what happend on this Transgender jounrey while of course carrying this big bump and embracing my true self.
 
-            So if you're interested in hearing my story, you can click the title of this embed — it links to my EGS playlist on YouTube. Or if you're looking for more depth, check out <#1175925314229121074>, which holds my stories up to **EGS 27**.
+                📖 **Explore the Story**
+                • **Watch:** Click the title of this embed for the YouTube playlist!
+                • **Read:** Check out <#1175925314229121074> for deep-dives (Chapters up to **EGS 31**).
 
-            Thanks for wanting to understand me a little more. 💖
-        `;
+                *Thanks for listening to my journey. Perhaps I can inspire yours?* 💖
+            `;
 
-        const embed = createEmbed(
-            `🎀 Elise her gender story 🎀`,
+            const embed = createEmbed(
+            `🎀 Elise their gender story 🎀`,
             description,
-            'https://media.discordapp.net/attachments/709057115159003156/1242704164681678909/20220728164709_1.jpg?ex=67e0e771&is=67df95f1&hm=f0e56e58f3ceca9af7fe2e33e32018e50d6c44649a137f5fddc7f55108f7a4c2&=&format=webp&width=1461&height=823',
-            "🎀 Elise Gender Story explained 🎀"
+            randomImage,
+            "🎀 Elise Gender Story explained !! { Last Updated at 8 JAN 2026 13:55 } !!🎀"
         );
 
         embed.setURL("https://www.youtube.com/watch?v=GxUxIMQsYP4&list=PLNc-vlTat7viUYY1BuxU1T563gskQpvJJ")

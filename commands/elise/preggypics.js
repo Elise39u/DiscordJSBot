@@ -8,8 +8,8 @@ const { markUser, digestUser } = require('../helpers/voreHandler');
 const pregnantPictures = require('../Assets/pregnantPictures.json');
 const { getRandomPregnantPicture, getRandomVoreImage, getImageByTag } = require('../helpers/bellyImageHandler');
 
-const MARKED_ROLE_ID = '1374755144503136277';
-const DIGESTED_ROLE_ID = '1374755276510728302';
+const MARKED_ROLE_ID = '1460774038069706900';
+const DIGESTED_ROLE_ID = '1460774040204607684';
 const ALLOWED_ROLE_IDS = ['813835682124529665', '1354084372847923343', '1256658955107565568', '699558391894507620'];
 const ALLOWED_CHANNEL_IDS = ['1370319140388343849', '1354767714953990215', '859788500114210826'];
 
@@ -23,11 +23,13 @@ module.exports = {
                 .addChoices(
                     { name: 'small_belly', value: 'small_belly' },
                     { name: 'big_belly', value: 'big_belly' },
-                    { name: 'sexy', value: 'sexy' },
+                    { name: 'pregnancy', value: 'pregnancy' },
                 ).setRequired(false)
         ),
 
     async execute(interaction) {
+    const normalColor = '#FFC0CB'; // Soft Pink
+    const secretColor = '#E0115F'; // Deep Ruby/Hot Pink
         const tag = interaction.options.getString('tag');
         const user = interaction.user;
         const member = await interaction.guild.members.fetch(user.id);
@@ -78,10 +80,12 @@ module.exports = {
             }
 
             // Block if Elise is too full/pregnant
+            /*
             if (data.isTooFullOrPregnant) {
                 return await interaction.reply(`💢 Sorry darling... your lucky this time... Im either pregnant or too full of others.. So for now you spared.. Mortal💗. 
                     Now move it and get away or else your next to curve my divine belly 😈`);
             }
+            */
 
             data.swallowedUsers.push({
                 id: user.id,
@@ -144,7 +148,8 @@ module.exports = {
             '💞 Divine Expectation 💞',
             useSecret ? secretDescription : regularDescription,
             chosenImage,
-            '🔮 Blessed by the swollen divine 🔮'
+            '🔮 Blessed by the swollen divine 🔮',
+            useSecret ? secretColor : normalColor
         );
 
         await interaction.reply({ embeds: [embed] });

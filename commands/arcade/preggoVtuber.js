@@ -16,6 +16,7 @@ module.exports = {
                 .setDescription('Optional tag like: color or type of clothing')
                 .addChoices(
                     { name: 'vtuber', value: 'vtuber' },
+                    { name: 'belly_cam', value: 'belly_cam' }
                 ).setRequired(false)
         ),
     async execute(interaction) {

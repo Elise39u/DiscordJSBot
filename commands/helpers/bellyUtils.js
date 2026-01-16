@@ -51,7 +51,7 @@ function formatPregnancyLine(pregnancyData) {
     if (type === "clone") {
         return `🤰 Pregnant by **${by}** (clone) since \`${pregTime}\` ~ But there’s still *room for a snack or another clone*~ 💕`;
     } else {
-        return `🍼 Elise is carrying **${amount > 1 ? amount + ' ' + species : 'a ' + species}** from **${by}** since \`${pregTime}\`. She can’t devour or clone right now~ 💗`;
+        return `🍼 Elise is carrying **${amount > 1 ? amount + ' ' + species : 'a ' + species}** from **${by}** since \`${pregTime}\`. They still can devour you peckish snacks or create clones. So watch out pixies.💗`;
     }
 }
 

@@ -20,7 +20,6 @@ module.exports = {
                     { name: 'shirt', value: 'shirt' },
                     { name: 'materiny_clothing', value: 'materiny_clothing' },
                     { name: 'blouse', value: 'blouse' },
-                    { name: 'natrual_belly', value: 'natrual_belly' },
                     { name: 'pink', value: 'pink' },
                     { name: 'jogging', value: 'jogging' },
                     { name: 'big_belly', value: 'big_belly' },
@@ -40,11 +39,14 @@ module.exports = {
                     { name: "dress", value: "dress"},
                     { name: "teal green", value: "teal_green"},
                     { name: "light_blue", value: "light_blue"},
+                    { name: "pyjama", value: "pyjama"},
                 ).setRequired(false)
         ),
     async execute(interaction) {
     const actingUser = interaction.user;
     const tag = interaction.options.getString('tag');
+    const normalColor = '#FFC0CB'; // Soft Pink
+    const secretColor = '#E0115F'; // Deep Ruby/Hot Pink
 
     // Read or create status file
     let data = { isTooFullOrPregnant: false, swallowedUsers: [] };
@@ -127,10 +129,11 @@ module.exports = {
                 `;
 
                 embed = createEmbed(
-                    `🎀 Elise and her divine belly 🎀`,
+                    `🎀 Elise and their divine belly 🎀`,
                     isLewd ? lewdDescription : description,
                     randomImage,
-                    '🎀 Stellar genesis womb 🎀'
+                    '🎀 Stellar genesis womb 🎀',
+                    isLewd ? secretColor : normalColor
                 );
             }
         }

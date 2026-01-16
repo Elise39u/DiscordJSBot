@@ -1,39 +1,38 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { createEmbed } = require('../helpers/embedBuilder');
+const { getRandomVtuberImage, getVtuberImageByURl, getRandomVoreImage, getImageByTag } = require("../helpers/bellyImageHandler")
+const vtuberPictures = require('../Assets/vtuberPictures.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('referencesheets')
 		.setDescription('Want to see a reference sheet for a look?'),
 	async execute(interaction) {
+        //TODO: update to fits new style of the bot 
+        let randomImage = getImageByTag(vtuberPictures, "reference_sheet");
+
         const description = `
-        Let’s keep this one short and sweet~ 💖  
-        Every outfit of mine has **both a pregnant and non-pregnant version**,  
-        but not every single look has a full reference sheet (yet)!
+        Oh Pixie, let’s keep this short and simple no Goddess teasing or hungry jokes for now! Just a quick guide on where to find my outfits and how I look while heavily pregnant. :ribbon:
 
-        Here’s where to find what:
+        :small_blue_diamond: <#962632624587808810> — **Non-Pregnant Versions** This channel holds all my looks updated with my V3 bust size. (More being added soon!)
+        :small_blue_diamond: <#1113790775269015563> — **Pregnant Versions** Here you can find my looks with a lovely, swollen pregnant belly. :pregnant_woman::sparkles:
+        :small_blue_diamond: <#1291045909399863306> — **Project Elise-Mon** Everything related to my Pokémon-inspired outfits! All 18 base types and the Stellar type are coming soon.
 
-        🔹 <#962632624587808810> — **Non-pregnant reference sheets**  
-        🔹 <#1113790775269015563> — **Pregnant reference sheets**  
-        🔹 <#1291045909399863306> — **Project EliseMon** content, including all 18 type-based outfits!
+        :warning: **Important Notes:**
+        :one: **Updates:** Preggo Elise reference sheets are currently being updated to match my V3 proportions. You can use \`/preggovtuber\` to see a few already :3
+        :two: **Elise-Mon:** These outfits will also receive dedicated pregnant reference sheets soon!
 
-        ⚠️ Small notes:
-        1️⃣ **Project EliseMon** outfits currently don’t have pregnant versions.
-        2️⃣ Not *all* my outfits are listed — I’ve got a *lot*, hehe ✨
+        If you saw a look in a video or stream and want to see the full reference, feel free to ask here in the server or dm me ! Updates will continue throughout 2026 and beyond. :cherry_blossom:
 
-        So if you saw a look you liked on stream or in a video and don’t see it in the ref section —  
-        feel free to **DM me or tag me in the server** 💌  
-        I might even update the section to include everything someday (maybe grouped up nicely~ we'll see).
-
-        With love,  
-        **Preggo Elise** 🎀
+        Much love from your pregnant trans girl,
+        **Elise**
         `;
 
         const embed = createEmbed(
-            `🎀 Elise reference sheets 🎀`,
+            `🎀 Elise their reference sheets and swollen looks :3 🎀`,
             description,
-            'https://media.discordapp.net/attachments/962632624587808810/1273964453125165086/EliseMainLooks_-_Copy.png?ex=67f0691a&is=67ef179a&hm=412fff592cccaf86a7d1aaeaaf5e216fe8d8319e93baed699f2b11280c3d5e28&=&format=webp&quality=lossless&width=688&height=386',
-            "🎀 Wanted a reference of your favourite outfit? 🎀"
+            randomImage,
+            "🎀 Wonderd how i look swollen. Or just see a ref sheet? {{ LAST UPDATE 12 JAN 2026 13:10 }} 🎀"
         );
 	    await interaction.reply({ embeds: [embed] });
 	},
