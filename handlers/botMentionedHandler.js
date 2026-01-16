@@ -1,4 +1,7 @@
 const { createEmbed } = require('../commands/helpers/embedBuilder');
+const { getImageByTag } = require("../commands/helpers/bellyImageHandler")
+const vtuberPictures = require('../commands/Assets/vtuberPictures.json');
+
 
 const keywordResponses = [
     {
@@ -35,7 +38,7 @@ const keywordResponses = [
     },
     {
         trigger: ['sister', 'sisters', 'curse of overabundance', 'stella', 'denise'],
-        response: `Ah… you speak their names? Tread lightly, sweet mortal. Some sisters were never meant to stay apart… or untouched~ and their love was never meant to be, yet still burns behind swollen wombs and divine regrets. 🔥💞`
+        response: `Ah that love who was orginally thought to be wrong but after she learned they arent sisters.. Love grew stronger 🥰💞 and now they are a poly triangle. Rumours speak Elise is trying to get Stella and Denise Pregnant on their request 😘🤰`
     },
     {
         trigger: ['stellar gensis womb', 'pregnant', 'preggo', 'royal mark'],
@@ -43,35 +46,26 @@ const keywordResponses = [
     },
     {
         trigger: ['forbidden love', 'love of the forbidden', 'love'],
-        response: `Error... File {REDACTED} corrupted… 💔  ...or is it simply too dangerous to reveal? Elise only never forgot her moment with Denise and Stella and so did her sisters 🥺💔`
+        response: `ERRROR 500: Redacted file has been corrupted after Elise learned of their creator. Stella and Denise arent sitsters.. But their love is too strong.. I sense the 3 of them are going to get pregnant together in thir polyamorous relationship 🥰🤰💞`
     }
 ];
 
 async function handleBotMention(message) {
     const normalizedContent = message.content.toLowerCase();
+	let randomImage = getImageByTag(vtuberPictures, "belly_cam");
 
     const description = `
-            Hiya~ I'm known as the **Digital Assistant** of your favorite **Goddess of Reproduction/Fertilly Elise**! 💕  
-            I help run the **Arcade** alongside them and, fun fact I’m actually a copy of Elise herself!  
-            So yes... when Elise created me, they were pregnant and well, now I’m permanently preggo too~ oops? 🤰✨
-            Surely creatse some fun between Me and Elise in her private bed{REDACTED}.. I think i wasnt meant to say that oops 
+            Hiya, Pixie! Looking for me? :pink_heart:
 
-            But enough about that what can I do for *you*, visitor? 💌  
-            Let me guide you through our cozy little world:
+            I’m the **Digital Assistant AI Clone** of your favorite Goddess of Fertility, Elise! I’m permanently stuck with this big, beautiful bump just like thhm and luckily, I haven't been "absorbed" back into theirbelly yet! hihi~ :pregnant_woman::sparkles:
 
-            🌲 A forest path filled with Pokémon leads to a Tokyo-style city~  
-            🎮 Inside the Arcade: mini-games, chill zones, warm water pools, snack corners, and more!  
-            💖 And of course, the star of the show **Elise** herself! Whether she’s streaming, singing, or just vibing or waddling around heavily pregnant.
-            🤰 Whats inside her belly? No one knows.. Can be species, people she devours in the arcade or just a special pregnancy from one of her lovers :3
+            **Need a guide to our Christmas Arcade?**
+            :christmas_tree: **Arcade & Pool:** Games, snacks, and warm waters.
+            :evergreen_tree: **Enchanted Forest:** Friendly Pokémon and Tokyo vibes.
+            :sparkling_heart: **The Goddess:** Catch Elise waddling, singing, or streaming!
 
-            Need help figuring things out?  
-            Start with the /help command this gives you an help menu that i can assist you further in dalring.
-
-            And hey, if you’re here just for a belly pat… that’s allowed too~ :3  
-            But dont stare too long darling.. I am copy of Elise in a perma pregnant state.. But that does still mean i have preggo hormons. 
-            Lets say you looking abloustley lovely today dalring 💖🤰
-            Feel free to call on me anytime you need me. I'm always here for you 💗  
-        `;
+            Need help? Use \`/help\`. Or are you just here for **belly rubs**? I adore the attention, but be careful if you tease this clone too much, I’m not responsible for what happens next! :smiling_imp: 
+        `;   
 
     let customNote = '';
     for (const keyword of keywordResponses) {
@@ -89,7 +83,7 @@ async function handleBotMention(message) {
         const embed = createEmbed(
             '✨ Hiya~ You called for Preggo Goddess Elise\'s their assistant? ✨',
             description,
-            'https://media.discordapp.net/attachments/709057115159003156/1399378252539232389/image.png',
+            randomImage,
             '🎀 Preggo clone AI Assistant 🎀'
         );
 

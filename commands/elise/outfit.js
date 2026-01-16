@@ -1,5 +1,8 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { createEmbed } = require('../helpers/embedBuilder');
+const { getRandomVtuberImage, getVtuberImageByURl, getRandomVoreImage, getImageByTag } = require("../helpers/bellyImageHandler")
+const vtuberPictures = require('../Assets/vtuberPictures.json');
+
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -7,43 +10,36 @@ module.exports = {
 		.setDescription('🎀 Well let this preggo explain preggos outfits too you 🎀'),
 	async execute(interaction) {
         const description = `
-            From 3 version outfits, to 18 Pokémon looks, to 10 Sekai dresses...  
-            Yeah, this preggo has a whole *closet-full* of styles — and I’m here to help you understand them all~ 🎀
+            Hey Pixie! Interested in my closet here in the Arcade Sekai? Come on in I have all sorts of outfits for this preggo goddess to show off! :dress::sparkles:
 
-            In the image below, you’ll see my **3 version outfits**, from my very first look to the upcoming **V3**.  
-            Booba size has been adjusted to match my current V2 design — consistency matters 😌
+            :star2: **Main Looks**
+            • **Vocaloid Signature V2:** My iconic green crop top with the Miku-style skirt and boots.
+            • **The Classics:** My original **V1 LMS Elise** look and the special outfit from when I first met Elif in his Sekai. I even let my hair down for my V2 look sometimes! :3, 
+            • **Main Group** Pair that as LMS V1 Elise, Arcade Elise, Vocaloid V2 Elise and Alt look and Fairy Elise as main look group :3
 
-            After that, there are my **10 Sekai dresses** (see <#962632624587808810>).  
-            These outfits are themed around Miku, because in LMS I was closest to her.  
-            Think of it like a bond or unit connection — kind of like how i am a close friend to Saki in Leo/Need 💫  
-            My **Brand new world (BN)** are also based on these bonds with different unit members.
+            :ribbon: **Special Collections**
+            • **Sekai & Mirai:** Dresses tied to my adventures across dimensions and the Magical Mirai stages.
+            • **Ultimate Pregnancy Dress:** The gown from my LMS journey when I was highly pregnant with Aurora.
+            • **Miku-Inspired:** Versions of *Odds and Ends*, *Monitoring*, and *Mesmerizer* all being updated to fit my current bust size! :3
 
-            Every look I have comes in both **pregnant and non-pregnant versions** — yep, every single one!  
-            You can find a collection of these in <#1113790775269015563> (though not all, I’ve got *too many*).  
-            Project Elise mon has it seprated channel: <#1291045909399863306>. The would be anthor 36 if you count both versions 😅
+            :date: **Project Elise-Mon & Beyond**
+            Throughout 2026, **Project Elise-Mon** returns in <#1291045909399863306>, starting with my Normal Type look! Keep an eye out for *Cinderella*, *Dilemma*, *Gift*, and *Supreme Elise* coming soon.
 
-            I usually consider these as my *main look set*:
-            1️⃣ Main V2
-            2️⃣ Alt V2
-            3️⃣ Girly Gamer Elise
-            4️⃣ Fairy Elise  
-            And of course, **V1** and **V3** — since they hold deeper lore importance 🌙
+            :open_file_folder: **Where to Look**
+            • **All Outfits:** <#962632624587808810>
+            • **Preggo Versions:** <#1113790775269015563>
+            • **Quick Peek:** Use \`/preggovtuber\` to see me gloriously swollen!
 
-            I’ve also got special designs tied to Miku like:
-            1️⃣ Dilemma Elise
-            2️⃣ Backrooms Elise (fun fact: based on my Odds & Ends dress!)
-            3️⃣ Highlight Elise
-
-            So yeah... I may have a *lot* of outfits, but each one tells a story 💖  
-            Catch them all in my streams or on YouTube — with love,  
-            **Preggo Elise** ✨
+            Check the image below to see a random look from my collection, darling. Ready to explore the rest of the Arcade? :pink_heart:
         `;
+
+        let randomImage = getImageByTag(vtuberPictures, "belly_cam");
 
         const embed = createEmbed(
             `🎀 Elise their outfit collection hehe or a bit 🎀`,
             description,
-            'https://media.discordapp.net/attachments/1093876399657451530/1356937553265295410/EliseVersion.png?ex=67ee6213&is=67ed1093&hm=f19a35aa50f6272513676bff08293bd7c467d57ad08b92f7382b0bd8ece62d14&=&format=webp&quality=lossless&width=1463&height=823',
-            "🎀 Elsie their outfits.🎀"
+            randomImage,
+            "🎀 Elsie their outfits. {{ LAST UPDATE 9 JAN 2026 12:30 }} 🎀"
         );
 	    await interaction.reply({ embeds: [embed] });
 	},

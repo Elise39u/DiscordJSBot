@@ -66,10 +66,11 @@ module.exports = {
             });
         }
 
-        // Block if Elise is too full/pregnant
+        /* Block if Elise is too full/pregnant
         if (data.isTooFullOrPregnant) {
             return await interaction.reply(`💢 Sorry darling... Im either too full of arcade visitors currently or pregnant and cant vore someone.., You'll have to wait until I’m feeling a bit lighter or gave birth~  💗`);
         }
+        */
 
         
         const sweet = [

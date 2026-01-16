@@ -7,6 +7,8 @@ const { createEmbed } = require('../DiscordJSBot/commands/helpers/embedBuilder')
 const memberJoin = require("../DiscordJSBot/server/serverJoin");
 const memberLeave = require("../DiscordJSBot/server/serverLeave");
 const hormonalsurge = require('../DiscordJSBot/commands/Elise/hormonalTrigger');
+const { getImageByTag } = require('../DiscordJSBot/commands/helpers/bellyImageHandler');
+const vtuberPictures = require('../DiscordJSBot/commands/Assets/vtuberPictures.json');
 
 //Needed to add the behaviour of introudction to the index.js file based if the bot is tagged:
 const mentionCooldown = new Set(); // anti-cooldown spam for the bot mention part
@@ -47,10 +49,12 @@ client.once(Events.ClientReady, readyClient => {
 	const channel = client.channels.cache.get('822837640872067082');
 	const mainChannel = client.channels.cache.get('699557641818734638');
 
+	let randomImage = getImageByTag(vtuberPictures, "belly_cam");
+
 	const embed = createEmbed(
-		`Digital Assistant v1.3 Has launched`,
+		`Digital Assistant v1.4.0 Has launched`,
 		`Mommy i have launched without any issues and im now live :3.`,
-		'https://cdn.discordapp.com/attachments/709057115159003156/1337417775429189673/Screenshot_74.png?ex=67a75edd&is=67a60d5d&hm=2df6b38df7e8995a49414dc34a8b875d2239cbd0dcbf01bc6c069cba4f65f656&'
+		randomImage
 	);
 
 	channel.send({ embeds: [embed] });
@@ -58,6 +62,7 @@ client.once(Events.ClientReady, readyClient => {
 	const TodayDate = new Date();
 	const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+	
 	switch (weekdays[TodayDate.getDay()]) {
 	case "Sunday":
 		sendDayMessage(mainChannel, "Its Slowpoke sunday :3. Time to pat them :3", null)
@@ -69,7 +74,7 @@ client.once(Events.ClientReady, readyClient => {
 		sendDayMessage(mainChannel, "I have a few blocks lauying around.. Is it tetris tuseday already?", null)
 		break;
 	case "Wednesday":
-		sendDayMessage(mainChannel, "Guys, Girls, Non-binary pals Check the waters real quick... I heared on Wailord Wednesday there are more of them in there to spot", null)
+		sendDayMessage(mainChannel, "Pixie pals Check the waters real quick... I heared on Wailord Wednesday there are more of them in there to spot", null)
 		break;
 	case "Thursday":
 		sendDayMessage(mainChannel, "Even as vocaloid herself.. Elise cant forget Teto thursday ofcourse XD", null)
@@ -80,6 +85,7 @@ client.once(Events.ClientReady, readyClient => {
 	case "Saturday":
 		sendDayMessage(mainChannel, "YAWWWWWWWWNNNNNNN i go to bed since i heared its sleepy saturday good nap.", null)
 	}
+	
 
 	client.user.setPresence({ 
         status: 'online',

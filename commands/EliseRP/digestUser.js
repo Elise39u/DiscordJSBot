@@ -3,9 +3,11 @@ const { digestUser } = require('../helpers/voreHandler');
 const { createEmbed } = require('../helpers/embedBuilder');
 const { getRandomBellyImage } = require('../helpers/bellyImageHandler')
 
-const MARKED_ROLE_ID = '1374755144503136277';
-const DIGESTED_ROLE_ID = '1374755276510728302';
+const MARKED_ROLE_ID = '1460774038069706900';
+const DIGESTED_ROLE_ID = '1460774040204607684';
 const { ELISE_ID } = process.env;
+
+//TODO: Add mark variant that allows me to randomly add a mark to a snack in my belly. To prep them for digestion :3
 
 module.exports = {
     data: new SlashCommandBuilder()

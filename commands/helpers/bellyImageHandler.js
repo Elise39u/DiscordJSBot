@@ -2,7 +2,7 @@ const bellyPictures = require('../Assets/bellyPictures.json');
 const voreBellyImages = require('../Assets/voreBellyPictures.json');
 const pregnantPictures = require('../Assets/pregnantPictures.json');
 const vtuberPictures = require('../Assets/vtuberPictures.json');
-const url = "";
+const projectDivaPictures = require('../Assets/projectDivaPictures.json');
 
 function getRandomImage(images) {
   return images[Math.floor(Math.random() * images.length)].url;

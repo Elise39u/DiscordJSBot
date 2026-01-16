@@ -27,7 +27,7 @@ module.exports = {
 
         // Roll the dice 🎲
         const userRoll = Math.floor(Math.random() * 150) + 1;
-        const eliseRoll = Math.floor(Math.random() * 150) + 5;
+        const eliseRoll = Math.floor(Math.random() * 150) + 10;
 
         let outcomeText = '';
         let flavor = '';
